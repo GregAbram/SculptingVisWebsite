@@ -1,0 +1,194 @@
+@import 'variables';
+
+nav {
+    position: fixed;
+    background-color: $light;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0;
+    z-index: 909;
+
+    ul {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-rows: 1fr;
+        column-gap: 20px;
+        padding: 26px 0 10px 0;
+        text-decoration: none;
+        grid-column: 1 / 6;
+        margin: 0 $page_margin;
+        border-bottom: 1px solid $dark;
+
+        li {
+            position: relative;
+            display: flex;
+            align-content: center;
+            font-size: 14px;
+            line-height: 18px;
+
+            &:nth-of-type(2n) {
+                justify-content: center;
+                font-size: 15px;
+                font-weight: 800;
+            }
+
+            &:nth-of-type(4n) {
+                justify-content: end;
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            // &:nth-of-type(4n), &:nth-of-type(5n) {
+            //     justify-content: flex-end;
+            // }
+
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     width: 6px;
+            //     height: 2px;
+            //     background-image: url(../../images/menu/flat.svg);
+            //     background-repeat: no-repeat;
+            //     background-size: contain;
+            //     bottom: -10px;
+            // }
+
+            // &:hover::before {
+            //     content: '';
+            //     position: absolute;
+            //     width: 12px;
+            //     height: 10px;
+            //     background-image: url(../../images/menu/peak.svg);
+            //     background-repeat: no-repeat;
+            //     background-size: contain;
+            //     bottom: -20px;
+            // }
+
+            a {
+                text-decoration: none;
+                color: $dark;
+            }
+        }
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-areas: "thrusts apps projects"
+    "copy copy copy";
+    grid-template-columns: 5fr 3fr 1fr;
+    column-gap: $page_margin;
+    padding: 0 $page_margin 0.75% $page_margin;
+
+    h1 {
+        font-family: $primary-font;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 0.06em;
+    }
+
+    ul {
+        h2 {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 15px;
+        }
+        li {
+            font-size: 14px;
+            line-height: 150%;
+        }
+    }
+
+    p {
+        grid-area: copy;
+        text-align: center;
+    }
+
+    .footer-section {
+        display: grid;
+        grid-template-rows: 25px auto;
+        border-top: solid $dark 1px;
+        column-gap: 15px;
+
+        h1 {
+            grid-area: title;
+        }
+
+        .footer-list {
+            h2 {
+                font-size: 13px;
+                margin-bottom: 6px;
+            }
+
+            ul {
+                margin-top: 0;
+                margin-left: 15px;
+
+                li {
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    .thrusts {
+        grid-area: thrusts;
+        grid-template-areas: "title title title title title" ". . . . .";
+    }
+
+    .apps {
+        grid-area: apps;
+        grid-template-areas: "title title" ". .";
+    }
+
+    .projects {
+        grid-area: projects;
+        grid-template-areas: "title" ".";
+    }
+}
+
+@include laptop {
+    footer {
+        grid-template-areas: "thrusts thrusts"
+        "apps projects"
+        "copy copy";
+        grid-template-columns: 2fr 1fr;
+        row-gap: 20px;
+    }
+}
+
+@include tablet {
+    footer {
+        grid-template-areas: "thrusts thrusts"
+        "apps projects"
+        "copy copy";
+        grid-template-columns: 2fr 1fr;
+        row-gap: 20px;
+    }
+}
+
+@include mobile {
+    footer {
+        grid-template-areas: "thrusts"
+        "apps"
+        "projects"
+        "copy";
+        grid-template-columns: 1fr;
+        padding: $page_margin;
+        row-gap: 20px;
+
+        .thrusts {
+            grid-template-columns: 1fr;
+            grid-template-areas: "title" "." "." "." "." ".";
+        }
+
+        .apps {
+            grid-template-columns: 1fr;
+            grid-template-areas: "title" "." ".";
+        }
+    }
+}

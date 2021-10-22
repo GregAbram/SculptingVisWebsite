@@ -1,0 +1,24 @@
+glob = require("glob")
+const nunjucks = require("nunjucks")
+const fs = require("fs")
+
+var regex = /njk/g
+
+glob("*.njk", function(er, files) {
+  for (let file in files)
+  {
+    src = files[file]
+    dst = src.replace(regex, 'html')
+    fs.writeFile(dst, nunjucks.render(src), function(e,d) { if (e) console.log(err); });
+  }
+})
+
+glob("njk/*.njk", function(er, files) {
+  for (let file in files)
+  {
+    src = files[file]
+    dst = src.replace(regex, 'html')
+    fs.writeFile(dst, nunjucks.render(src), function(e,d) { if (e) console.log(err); });
+    console.log(src, "done");
+  }
+})

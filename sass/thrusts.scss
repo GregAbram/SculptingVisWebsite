@@ -1,0 +1,232 @@
+@import 'variables';
+
+#page-container {
+    display: grid;
+    padding: 0 $page_margin;
+    grid-template-areas: "hero hero"
+    "sidebar content";
+    width: 100%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto 100px;
+    box-sizing: border-box;
+    column-gap: 10px;
+
+    img {
+        width: 100%;
+    }
+
+    #hero-image {
+        grid-area: hero;
+        img {
+            width: 100%;
+            object-fit: fill;
+        }
+    }
+
+    #sidebar {
+        grid-area: sidebar;
+        padding-top: 36px;
+
+        .sticky {
+            position: sticky;
+            top: 100px;
+
+            h1 {
+                font-family: $primary-font;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+            }
+    
+            h2 {
+                font-family: $primary-font;
+                font-weight: 400;
+                font-size: 2rem;
+                line-height: 32px;
+                margin-top: -5px;
+            }
+    
+            ul {
+                padding-left: 20px;
+                margin-top: 28px;
+    
+                li {
+                    list-style: none;
+                    margin: 8px 0;
+                    font-size: 16px;
+    
+                    a {
+                        text-decoration: none;
+                        line-height: 150%;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // all page content styles are under this id.
+    #content {
+        grid-area: content;
+        p a {
+            position: relative;
+            font-weight: 600;
+            padding-right: 10px;
+            white-space: nowrap;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 2px;
+                width: 0.5em;
+                height: 0.5em;
+                background-image: url('../../images/icons/url_arrow.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        h3 {
+            padding-top: 50px;
+            font-family: $primary-font;
+            letter-spacing: 0.05rem;
+            line-height: 0px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        p {
+            font-family: $primary-font;
+            font-size: $paragraph;
+            line-height: 150%;
+            font-weight: 400;
+            margin: 20px 0;
+
+            &.big-paragraph {
+                font-size: $big-paragraph;
+            }
+        }
+
+        .single-image, .dual-images {
+            padding-top: 30px;
+
+            h5 {
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                font-size: 10px;
+                line-height: 15px;
+                margin-top: 0;
+                font-weight: 400;
+            }
+        }
+    
+        .dual-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: $dual-image-gap;
+    
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+
+    #contributors {
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            row-gap: 12px;
+            padding-top: 5px;
+        }
+    
+        li {
+            position: relative;
+            margin-right: 40px;
+            font-weight: 600;
+            line-height: 150%;
+            white-space: nowrap;
+
+            a::after {
+                content: '';
+                position: absolute;
+                right: -13px;
+                width: 10px;
+                height: 10px;
+                background-image: url('../../images/icons/url_arrow.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    #sources {
+        ul {
+            padding-top: 5px;
+            li {
+                margin-bottom: 40px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                h4 {
+                    position: relative;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 125%;
+                    margin-bottom: 16px;
+                    margin-top: 0;
+                    padding-right: 20px;
+
+                    .doi {
+                        position: absolute;
+                        right: 0px;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 150%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    #supporters {
+        ul {
+           display: flex;
+           justify-content: space-between;
+           flex-wrap: wrap;
+           row-gap: 10px;
+           margin: 20px 0 0 0;
+
+           li a {
+            font-weight: 600;
+            white-space: nowrap;
+           }
+        }
+    }
+}
+
+@include mobile {
+    #page-container {
+        grid-template-areas: "hero"
+        "sidebar"
+        "content";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding-bottom: 40px;
+    }
+}

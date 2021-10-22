@@ -1,0 +1,53 @@
+// COLORS
+$dark: #030303;
+$light: #DFD5C8;
+
+//FONTS
+@font-face {
+    font-family: 'Sohne';
+    src: url(../../images/soehne-web-buch-e879cf4711c53e5e300ac0612db99980.woff2);
+}
+
+$primary-font: "Sohne";
+
+//FONT SIZING
+$paragraph: 1rem;
+$big-paragraph: 1.25rem;
+
+
+//PAGE VARIABLES
+$page_margin: 3.5%;
+$dual-image-gap: 4.5%;
+
+//PUBLICATION VARIABLES
+$publication-margin: 7%;
+
+
+//MEDIA QUERIES
+$desktop-width: 1440px;
+$laptop-width: 769px;
+$tablet-width: 426px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: #{$laptop-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
