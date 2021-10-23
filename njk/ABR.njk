@@ -11,10 +11,12 @@
     </head>
     <body>
 
-      <div id="page-container">
-        <div id="header">
-          {% include "html/header.html" %}
-        </div>
+      <div style="overflow: hidden;background-color: #333;position: fixed;top: 0;width: 100%;">
+        {% include "html/header.html" %}
+      </div>
+
+      <div style="display: block"
+      <div id="page-container" style="margin-top: 70px">
 
         <div id="sidebar">
         <div class="sticky">
@@ -159,11 +161,13 @@
           </ul>
         </div>
         </div>
+
         <div id="footer">
           {% include "html/footer.html" %}
         </div>
 
       </div>
+    </div>
       <script src="" async defer></script>
     </body>
 </html>
