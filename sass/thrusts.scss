@@ -2,26 +2,32 @@
 
 #page-container {
     display: grid;
-    padding: 0 $page_margin;
-    grid-template-areas: "hero hero"
-    "sidebar content";
+    padding: $page_margin;
+    grid-template-areas: "header header" "sidebar content" "footer footer";
     width: 100%;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto 100px;
+    grid-template-rows: auto auto auto;
     box-sizing: border-box;
     column-gap: 10px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
 
     img {
         width: 100%;
     }
 
-    #hero-image {
-        grid-area: hero;
-        img {
-            width: 100%;
-            object-fit: fill;
-        }
+    #header {
+      grid-area: header;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 3px;
+      font-size: 30px;
+      text-align: center;
     }
+
 
     #sidebar {
         grid-area: sidebar;
@@ -37,7 +43,7 @@
                 font-size: 14px;
                 line-height: 21px;
             }
-    
+
             h2 {
                 font-family: $primary-font;
                 font-weight: 400;
@@ -45,16 +51,16 @@
                 line-height: 32px;
                 margin-top: -5px;
             }
-    
+
             ul {
                 padding-left: 20px;
                 margin-top: 28px;
-    
+
                 li {
                     list-style: none;
                     margin: 8px 0;
                     font-size: 16px;
-    
+
                     a {
                         text-decoration: none;
                         line-height: 150%;
@@ -71,6 +77,8 @@
     // all page content styles are under this id.
     #content {
         grid-area: content;
+        padding-top: 36px;
+        overflow: auto;
         p a {
             position: relative;
             font-weight: 600;
@@ -125,18 +133,28 @@
                 font-weight: 400;
             }
         }
-    
+
         .dual-images {
             display: grid;
             grid-template-columns: 1fr 1fr;
             column-gap: $dual-image-gap;
-    
+
             img {
                 object-fit: cover;
                 width: 100%;
             }
         }
     }
+
+    #footer {
+      grid-area: footer;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 2px;
+      font-size: 12px;
+      text-align: center;
+    }
+
 
     #contributors {
         ul {
@@ -146,7 +164,7 @@
             row-gap: 12px;
             padding-top: 5px;
         }
-    
+
         li {
             position: relative;
             margin-right: 40px;

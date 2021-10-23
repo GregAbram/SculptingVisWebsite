@@ -2,146 +2,10 @@
   font-family: "Sohne";
   src: url(../../images/soehne-web-buch-e879cf4711c53e5e300ac0612db99980.woff2);
 }
-nav {
-  position: fixed;
-  background-color: #DFD5C8;
-  left: 0;
-  right: 0;
-  top: 0;
-  padding: 0;
-  z-index: 909;
-}
-nav ul {
-  display: grid;
-  grid-template-columns: auto 1fr auto auto;
-  grid-template-rows: 1fr;
-  column-gap: 20px;
-  padding: 26px 0 10px 0;
-  text-decoration: none;
-  grid-column: 1/6;
-  margin: 0 3.5%;
-  border-bottom: 1px solid #030303;
-}
-nav ul li {
-  position: relative;
-  display: flex;
-  align-content: center;
-  font-size: 14px;
-  line-height: 18px;
-}
-nav ul li:nth-of-type(2n) {
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 800;
-}
-nav ul li:nth-of-type(4n) {
-  justify-content: end;
-  font-size: 14px;
-  font-weight: 400;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #030303;
-}
-
-footer {
-  display: grid;
-  grid-template-areas: "thrusts apps projects" "copy copy copy";
-  grid-template-columns: 5fr 3fr 1fr;
-  column-gap: 3.5%;
-  padding: 0 3.5% 0.75% 3.5%;
-}
-footer h1 {
-  font-family: "Sohne";
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 13px;
-  letter-spacing: 0.06em;
-}
-footer ul h2 {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 15px;
-}
-footer ul li {
-  font-size: 14px;
-  line-height: 150%;
-}
-footer p {
-  grid-area: copy;
-  text-align: center;
-}
-footer .footer-section {
-  display: grid;
-  grid-template-rows: 25px auto;
-  border-top: solid #030303 1px;
-  column-gap: 15px;
-}
-footer .footer-section h1 {
-  grid-area: title;
-}
-footer .footer-section .footer-list h2 {
-  font-size: 13px;
-  margin-bottom: 6px;
-}
-footer .footer-section .footer-list ul {
-  margin-top: 0;
-  margin-left: 15px;
-}
-footer .footer-section .footer-list ul li a {
-  font-size: 13px;
-}
-footer .thrusts {
-  grid-area: thrusts;
-  grid-template-areas: "title title title title title" ". . . . .";
-}
-footer .apps {
-  grid-area: apps;
-  grid-template-areas: "title title" ". .";
-}
-footer .projects {
-  grid-area: projects;
-  grid-template-areas: "title" ".";
-}
-
-@media (min-width: 769px) and (max-width: 1439px) {
-  footer {
-    grid-template-areas: "thrusts thrusts" "apps projects" "copy copy";
-    grid-template-columns: 2fr 1fr;
-    row-gap: 20px;
-  }
-}
-@media (min-width: 426px) and (max-width: 768px) {
-  footer {
-    grid-template-areas: "thrusts thrusts" "apps projects" "copy copy";
-    grid-template-columns: 2fr 1fr;
-    row-gap: 20px;
-  }
-}
-@media (max-width: 425px) {
-  footer {
-    grid-template-areas: "thrusts" "apps" "projects" "copy";
-    grid-template-columns: 1fr;
-    padding: 3.5%;
-    row-gap: 20px;
-  }
-  footer .thrusts {
-    grid-template-columns: 1fr;
-    grid-template-areas: "title" "." "." "." "." ".";
-  }
-  footer .apps {
-    grid-template-columns: 1fr;
-    grid-template-areas: "title" "." ".";
-  }
-}
-@font-face {
-  font-family: "Sohne";
-  src: url(../../images/soehne-web-buch-e879cf4711c53e5e300ac0612db99980.woff2);
-}
 section {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  padding: 0 3.5%;
+  padding: 0 1%;
 }
 section:first-of-type {
   margin-top: 100px;
@@ -259,25 +123,146 @@ section .subsection .publication .desc ul li a:hover {
   font-family: "Sohne";
   src: url(../../images/soehne-web-buch-e879cf4711c53e5e300ac0612db99980.woff2);
 }
+.titlebar {
+  left: 3.5%;
+  right: 3.5%;
+  background-color: #DFD5C8;
+  z-index: 999;
+}
+
+.titlebar-grid {
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr 2fr 2fr;
+}
+
+.titlebar-title {
+  font-size: 40px;
+  justify-self: left;
+}
+
+.titlebar-button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 25px;
+}
+
+footer {
+  display: grid;
+  grid-template-areas: "thrusts apps projects" "copy copy copy";
+}
+footer h1 {
+  font-family: "Sohne";
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 0.06em;
+}
+footer ul h2 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 15px;
+}
+footer ul li {
+  font-size: 14px;
+  line-height: 150%;
+}
+footer p {
+  grid-area: copy;
+  text-align: center;
+}
+footer .footer-section {
+  display: grid;
+  grid-template-rows: auto auto;
+  border-top: solid #030303 1px;
+  column-gap: 15px;
+}
+footer .footer-section h1 {
+  grid-area: title;
+}
+footer .footer-section .footer-list h2 {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+footer .footer-section .footer-list ul {
+  margin-top: 0;
+  margin-left: 15px;
+}
+footer .footer-section .footer-list ul li a {
+  font-size: 13px;
+}
+footer .thrusts {
+  grid-area: thrusts;
+  grid-template-areas: "title title title title title" ". . . . .";
+}
+footer .apps {
+  grid-area: apps;
+  grid-template-areas: "title title" ". .";
+}
+footer .projects {
+  grid-area: projects;
+  grid-template-areas: "title" ".";
+}
+
+@media (min-width: 769px) and (max-width: 1439px) {
+  footer {
+    grid-template-areas: "thrusts thrusts" "apps projects" "copy copy";
+    grid-template-columns: 2fr 1fr;
+    row-gap: 20px;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  footer {
+    grid-template-areas: "thrusts thrusts" "apps projects" "copy copy";
+    grid-template-columns: 2fr 1fr;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 425px) {
+  footer {
+    grid-template-areas: "thrusts" "apps" "projects" "copy";
+    grid-template-columns: 1fr;
+    padding: 1%;
+    row-gap: 20px;
+  }
+  footer .thrusts {
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "." "." "." "." ".";
+  }
+  footer .apps {
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "." ".";
+  }
+}
+@font-face {
+  font-family: "Sohne";
+  src: url(../../images/soehne-web-buch-e879cf4711c53e5e300ac0612db99980.woff2);
+}
 #page-container {
   display: grid;
-  padding: 0 3.5%;
-  grid-template-areas: "hero hero" "sidebar content";
+  padding: 1%;
+  grid-template-areas: "header header" "sidebar content" "footer footer";
   width: 100%;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto 100px;
+  grid-template-rows: auto auto auto;
   box-sizing: border-box;
   column-gap: 10px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
 }
 #page-container img {
   width: 100%;
 }
-#page-container #hero-image {
-  grid-area: hero;
-}
-#page-container #hero-image img {
-  width: 100%;
-  object-fit: fill;
+#page-container #header {
+  grid-area: header;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 3px;
+  font-size: 30px;
+  text-align: center;
 }
 #page-container #sidebar {
   grid-area: sidebar;
@@ -318,6 +303,8 @@ section .subsection .publication .desc ul li a:hover {
 }
 #page-container #content {
   grid-area: content;
+  padding-top: 36px;
+  overflow: auto;
 }
 #page-container #content p a {
   position: relative;
@@ -375,6 +362,14 @@ section .subsection .publication .desc ul li a:hover {
 #page-container #content .dual-images img {
   object-fit: cover;
   width: 100%;
+}
+#page-container #footer {
+  grid-area: footer;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 2px;
+  font-size: 12px;
+  text-align: center;
 }
 #page-container #contributors ul {
   display: flex;
@@ -457,7 +452,7 @@ section .subsection .publication .desc ul li a:hover {
 #about-container {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 3.5%;
+  padding: 0 1%;
 }
 #about-container #ethos {
   display: grid;
@@ -550,7 +545,7 @@ section .subsection .publication .desc ul li a:hover {
 }
 #list-container {
   display: grid;
-  padding: 0 3.5% 7% 3.5%;
+  padding: 0 1% 2% 1%;
   width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
@@ -587,7 +582,7 @@ section .subsection .publication .desc ul li a:hover {
 }
 #homepage-container {
   display: grid;
-  padding: 0 3.5%;
+  padding: 0 1%;
   grid-template-areas: "hero hero" "about about" "thrust1 thrust2" "pubs pubs";
   width: 100%;
   grid-template-columns: 1fr 1fr;
