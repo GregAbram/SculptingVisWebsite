@@ -5,8 +5,8 @@ thrust-nav {
   top: 0;
   height: 100px;
   position: absolute;
-  background-color: blue;
-  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 thrust-page {
@@ -33,13 +33,11 @@ thrust-footer {
   width: 100%;
   box-sizing: border-box;
   column-gap: 10px;
-  background-color: green;
 
 }
 
 thrust-sidebar {
   grid-area: sidebar;
-  background-color: grey;
 
   div {
     position: sticky;
@@ -85,7 +83,6 @@ thrust-sidebar {
 thrust-content {
   grid-area: content;
   padding-top: 60px;
-  background-color: red;
 
   img {
       width: 100%;
