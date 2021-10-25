@@ -1,250 +1,159 @@
+
 @import 'variables';
 
-#page-header {
-  position: fixed;
+thrust-nav {
+  top: 0;
+  height: 100px;
+  position: absolute;
+  background-color: blue;
+  width: 100%;
+}
+
+thrust-page {
+  top: 100px;
+  bottom: 0;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 3px;
-  height: 50px;
-  font-size: 30px;
+  position: absolute;
+  padding-left: 2%;
+  padding-right: 2%;
+  overflow: auto;
+  display: grid;
+  grid-template-areas: "sidebar content" "footer footer";
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+thrust-footer {
+  grid-area: footer;
+  padding: 2px;
+  font-size: 12px;
   text-align: center;
+  padding: $page_margin;
+  width: 100%;
+  box-sizing: border-box;
+  column-gap: 10px;
+  background-color: green;
+
 }
 
-#page-container {
-    display: grid;
+thrust-sidebar {
+  grid-area: sidebar;
+  background-color: grey;
 
-    padding: $page_margin;
-    grid-template-areas: "sidebar content" "footer footer";
-    width: 100%;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto;
-    box-sizing: border-box;
-    column-gap: 10px;
-    overflow: auto;
+  div {
+    position: sticky;
+    top: 0;
+  }
 
-    img {
-        width: 100%;
+  h1 {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  h2 {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 32px;
+    margin-top: -5px;
+  }
+
+  ul {
+      padding-left: 20px;
+      margin-top: 28px;
+
+      li {
+          list-style: none;
+          margin: 8px 0;
+          font-size: 16px;
+
+          a {
+              text-decoration: none;
+              line-height: 150%;
+
+              &:hover {
+                  text-decoration: underline;
+              }
+          }
+      }
     }
+  }
 
-    #sidebar {
-        grid-area: sidebar;
-        padding-top: 36px;
+thrust-content {
+  grid-area: content;
+  padding-top: 60px;
+  background-color: red;
 
-        .sticky {
-            position: sticky;
-            top: 100px;
+  img {
+      width: 100%;
+  }
 
-            h1 {
-                font-family: $primary-font;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 21px;
-            }
+  p a {
+      position: relative;
+      font-weight: 600;
+      padding-right: 10px;
+      white-space: nowrap;
 
-            h2 {
-                font-family: $primary-font;
-                font-weight: 400;
-                font-size: 2rem;
-                line-height: 32px;
-                margin-top: -5px;
-            }
+      &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 2px;
+          width: 0.5em;
+          height: 0.5em;
+          background-image: url('../../images/icons/url_arrow.svg');
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+      }
+  }
 
-            ul {
-                padding-left: 20px;
-                margin-top: 28px;
+  h3 {
+      padding-top: 50px;
+      font-family: $primary-font;
+      letter-spacing: 0.05rem;
+      line-height: 0px;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 400;
+  }
 
-                li {
-                    list-style: none;
-                    margin: 8px 0;
-                    font-size: 16px;
+  p {
+      font-family: $primary-font;
+      font-size: $paragraph;
+      line-height: 150%;
+      font-weight: 400;
+      margin: 20px 0;
 
-                    a {
-                        text-decoration: none;
-                        line-height: 150%;
+      &.big-paragraph {
+          font-size: $big-paragraph;
+      }
+  }
 
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-                }
-            }
-        }
-    }
+  .single-image, .dual-images {
+      padding-top: 30px;
 
-    // all page content styles are under this id.
-    #content {
-        grid-area: content;
-        padding-top: 36px;
-        overflow: auto;
-        p a {
-            position: relative;
-            font-weight: 600;
-            padding-right: 10px;
-            white-space: nowrap;
+      h5 {
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          font-size: 10px;
+          line-height: 15px;
+          margin-top: 0;
+          font-weight: 400;
+      }
+  }
 
-            &::after {
-                content: '';
-                position: absolute;
-                right: 0;
-                top: 2px;
-                width: 0.5em;
-                height: 0.5em;
-                background-image: url('../../images/icons/url_arrow.svg');
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-        }
+  .dual-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: $dual-image-gap;
 
-        h3 {
-            padding-top: 50px;
-            font-family: $primary-font;
-            letter-spacing: 0.05rem;
-            line-height: 0px;
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
-
-        p {
-            font-family: $primary-font;
-            font-size: $paragraph;
-            line-height: 150%;
-            font-weight: 400;
-            margin: 20px 0;
-
-            &.big-paragraph {
-                font-size: $big-paragraph;
-            }
-        }
-
-        .single-image, .dual-images {
-            padding-top: 30px;
-
-            h5 {
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                font-size: 10px;
-                line-height: 15px;
-                margin-top: 0;
-                font-weight: 400;
-            }
-        }
-
-        .dual-images {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: $dual-image-gap;
-
-            img {
-                object-fit: cover;
-                width: 100%;
-            }
-        }
-    }
-
-    #footer {
-      grid-area: footer;
-      background-color: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(0, 0, 0, 0.8);
-      padding: 2px;
-      font-size: 12px;
-      text-align: center;
-    }
-
-
-    #contributors {
-        ul {
-            display: flex;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            row-gap: 12px;
-            padding-top: 5px;
-        }
-
-        li {
-            position: relative;
-            margin-right: 40px;
-            font-weight: 600;
-            line-height: 150%;
-            white-space: nowrap;
-
-            a::after {
-                content: '';
-                position: absolute;
-                right: -13px;
-                width: 10px;
-                height: 10px;
-                background-image: url('../../images/icons/url_arrow.svg');
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-        }
-    }
-
-    #sources {
-        ul {
-            padding-top: 5px;
-            li {
-                margin-bottom: 40px;
-
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
-
-                h4 {
-                    position: relative;
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 125%;
-                    margin-bottom: 16px;
-                    margin-top: 0;
-                    padding-right: 20px;
-
-                    .doi {
-                        position: absolute;
-                        right: 0px;
-                        font-size: 12px;
-                        text-transform: uppercase;
-                    }
-                }
-
-                p {
-                    font-size: 14px;
-                    line-height: 150%;
-                    margin: 0;
-                }
-            }
-        }
-    }
-
-    #supporters {
-        ul {
-           display: flex;
-           justify-content: space-between;
-           flex-wrap: wrap;
-           row-gap: 10px;
-           margin: 20px 0 0 0;
-
-           li a {
-            font-weight: 600;
-            white-space: nowrap;
-           }
-        }
-    }
-}
-
-@include mobile {
-    #page-container {
-        grid-template-areas: "hero"
-        "sidebar"
-        "content";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        padding-bottom: 40px;
-    }
+      img {
+          object-fit: cover;
+          width: 100%;
+      }
+  }
 }

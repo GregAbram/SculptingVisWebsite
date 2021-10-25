@@ -3,13 +3,14 @@
 .titlebar {
     left: 3.5%;
     right: 3.5%;
+    height: 65px;
     background-color: $light;
     z-index: 999;
 }
 
 .titlebar-grid{
     display: grid;
-    grid-template-columns: 4fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 4fr 2fr 2fr 2fr;
 }
 
 .titlebar-title {
@@ -28,9 +29,9 @@ footer {
     display: grid;
     grid-template-areas: "thrusts apps projects"
     "copy copy copy";
-    //grid-template-columns: 5fr 3fr 1fr;
-    //column-gap: $page_margin;
-    //padding: 0 $page_margin 0.75% $page_margin;
+    grid-template-columns: 5fr 3fr 1fr;
+    column-gap: $page_margin;
+    padding: 0 $page_margin 0.75% $page_margin;
 
     h1 {
         font-family: $primary-font;

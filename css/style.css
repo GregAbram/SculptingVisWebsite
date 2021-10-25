@@ -126,13 +126,14 @@ section .subsection .publication .desc ul li a:hover {
 .titlebar {
   left: 3.5%;
   right: 3.5%;
+  height: 65px;
   background-color: #DFD5C8;
   z-index: 999;
 }
 
 .titlebar-grid {
   display: grid;
-  grid-template-columns: 4fr 2fr 2fr 2fr 2fr;
+  grid-template-columns: 4fr 2fr 2fr 2fr;
 }
 
 .titlebar-title {
@@ -150,6 +151,9 @@ section .subsection .publication .desc ul li a:hover {
 footer {
   display: grid;
   grid-template-areas: "thrusts apps projects" "copy copy copy";
+  grid-template-columns: 5fr 3fr 1fr;
+  column-gap: 1%;
+  padding: 0 1% 0.75% 1%;
 }
 footer h1 {
   font-family: "Sohne";
@@ -238,82 +242,94 @@ footer .projects {
   font-family: "Sohne";
   src: url(../../images/soehne-web-buch-e879cf4711c53e5e300ac0612db99980.woff2);
 }
-#page-header {
-  position: fixed;
-  left: 0;
-  right: 0;
+thrust-nav {
   top: 0;
-  bottom: 0;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 3px;
-  height: 50px;
-  font-size: 30px;
-  text-align: center;
+  height: 100px;
+  position: absolute;
+  background-color: blue;
+  width: 100%;
 }
 
-#page-container {
+thrust-page {
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  padding-left: 2%;
+  padding-right: 2%;
+  overflow: auto;
   display: grid;
-  padding: 1%;
   grid-template-areas: "sidebar content" "footer footer";
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+thrust-footer {
+  grid-area: footer;
+  padding: 2px;
+  font-size: 12px;
+  text-align: center;
+  padding: 1%;
   width: 100%;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto;
   box-sizing: border-box;
   column-gap: 10px;
-  overflow: auto;
+  background-color: green;
 }
-#page-container img {
-  width: 100%;
-}
-#page-container #sidebar {
+
+thrust-sidebar {
   grid-area: sidebar;
-  padding-top: 36px;
+  background-color: grey;
 }
-#page-container #sidebar .sticky {
+thrust-sidebar div {
   position: sticky;
-  top: 100px;
+  top: 0;
 }
-#page-container #sidebar .sticky h1 {
+thrust-sidebar h1 {
   font-family: "Sohne";
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
 }
-#page-container #sidebar .sticky h2 {
+thrust-sidebar h2 {
   font-family: "Sohne";
   font-weight: 400;
   font-size: 2rem;
   line-height: 32px;
   margin-top: -5px;
 }
-#page-container #sidebar .sticky ul {
+thrust-sidebar ul {
   padding-left: 20px;
   margin-top: 28px;
 }
-#page-container #sidebar .sticky ul li {
+thrust-sidebar ul li {
   list-style: none;
   margin: 8px 0;
   font-size: 16px;
 }
-#page-container #sidebar .sticky ul li a {
+thrust-sidebar ul li a {
   text-decoration: none;
   line-height: 150%;
 }
-#page-container #sidebar .sticky ul li a:hover {
+thrust-sidebar ul li a:hover {
   text-decoration: underline;
 }
-#page-container #content {
+
+thrust-content {
   grid-area: content;
-  padding-top: 36px;
-  overflow: auto;
+  padding-top: 60px;
+  background-color: red;
 }
-#page-container #content p a {
+thrust-content img {
+  width: 100%;
+}
+thrust-content p a {
   position: relative;
   font-weight: 600;
   padding-right: 10px;
   white-space: nowrap;
 }
-#page-container #content p a::after {
+thrust-content p a::after {
   content: "";
   position: absolute;
   right: 0;
@@ -325,7 +341,7 @@ footer .projects {
   background-size: contain;
   background-repeat: no-repeat;
 }
-#page-container #content h3 {
+thrust-content h3 {
   padding-top: 50px;
   font-family: "Sohne";
   letter-spacing: 0.05rem;
@@ -334,20 +350,20 @@ footer .projects {
   text-transform: uppercase;
   font-weight: 400;
 }
-#page-container #content p {
+thrust-content p {
   font-family: "Sohne";
   font-size: 1rem;
   line-height: 150%;
   font-weight: 400;
   margin: 20px 0;
 }
-#page-container #content p.big-paragraph {
+thrust-content p.big-paragraph {
   font-size: 1.25rem;
 }
-#page-container #content .single-image, #page-container #content .dual-images {
+thrust-content .single-image, thrust-content .dual-images {
   padding-top: 30px;
 }
-#page-container #content .single-image h5, #page-container #content .dual-images h5 {
+thrust-content .single-image h5, thrust-content .dual-images h5 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 10px;
@@ -355,97 +371,16 @@ footer .projects {
   margin-top: 0;
   font-weight: 400;
 }
-#page-container #content .dual-images {
+thrust-content .dual-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 4.5%;
 }
-#page-container #content .dual-images img {
+thrust-content .dual-images img {
   object-fit: cover;
   width: 100%;
 }
-#page-container #footer {
-  grid-area: footer;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 2px;
-  font-size: 12px;
-  text-align: center;
-}
-#page-container #contributors ul {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  row-gap: 12px;
-  padding-top: 5px;
-}
-#page-container #contributors li {
-  position: relative;
-  margin-right: 40px;
-  font-weight: 600;
-  line-height: 150%;
-  white-space: nowrap;
-}
-#page-container #contributors li a::after {
-  content: "";
-  position: absolute;
-  right: -13px;
-  width: 10px;
-  height: 10px;
-  background-image: url("../../images/icons/url_arrow.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-#page-container #sources ul {
-  padding-top: 5px;
-}
-#page-container #sources ul li {
-  margin-bottom: 40px;
-}
-#page-container #sources ul li:last-of-type {
-  margin-bottom: 0;
-}
-#page-container #sources ul li h4 {
-  position: relative;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 125%;
-  margin-bottom: 16px;
-  margin-top: 0;
-  padding-right: 20px;
-}
-#page-container #sources ul li h4 .doi {
-  position: absolute;
-  right: 0px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-#page-container #sources ul li p {
-  font-size: 14px;
-  line-height: 150%;
-  margin: 0;
-}
-#page-container #supporters ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 10px;
-  margin: 20px 0 0 0;
-}
-#page-container #supporters ul li a {
-  font-weight: 600;
-  white-space: nowrap;
-}
 
-@media (max-width: 425px) {
-  #page-container {
-    grid-template-areas: "hero" "sidebar" "content";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    padding-bottom: 40px;
-  }
-}
 @font-face {
   font-family: "Sohne";
   src: url(../../images/soehne-web-buch-e879cf4711c53e5e300ac0612db99980.woff2);
