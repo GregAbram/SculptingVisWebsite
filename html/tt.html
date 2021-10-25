@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Thrusts | Sculpting Visualizations</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <style>
+        mypage-header {
+          grid-area: top;
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+        }
+
+        mypage-sidebar {
+          grid-area: left;
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+        }
+
+        mypage-content {
+          grid-area: right;
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+          overflow: auto;
+        }
+
+        mypage-footer {
+          grid-area: bottom;
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+        }
+
+        mypage {
+          display: grid;
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          grid-template-areas: "top top" "left right" "bottom bottom";
+          grid-template-rows: 60px 1fr 60px;
+          grid-template-columns: 30% 70%;
+          background-color: #2196F3;
+          padding: 10px;
+        }
+
+        </style>
+    </head>
+    <body>
+
+      <mypage>
+        <mypage-header>
+          <div>
+  <div class="titlebar">
+    <div class="titlebar-grid">
+      <div class="titlebar-title"><a href="index.html">SculptingVis</a></div>
+      <div class="titlebar-button"><a href="lists.html">Thrusts &amp; Apps</a></div>
+      <div class="titlebar-button"><a href="publications.html">Publications</a></div>
+      <div class="titlebar-button"><a href="about.html">About</a></div>
+    </div>
+  </div>
+  <hr>
+</div>
+
+        </mypage-header>
+
+        <mypage-sidebar>
+          <h1>Visualization Software Architectures for Arts, Humanities,<br>and STEM Integration</h1>
+          <h2>Artifact-Based Rendering</h2>
+          <ul>
+              <li><a href="#overview">Artifact-Based Rendering</a></li>
+              <li><a href="#ExpandedVocab">1. Expanded Visualization Vocabularies</a></li>
+              <li><a href="#interface">2. ABR Interface</a></li>
+              <li><a href="#libraries">3. ABR Libraries</a></li>
+              <li><a href="#applets">4. Applets</a></li>
+              <li><a href="#pubs">5. Publications</a></li>
+          </ul>
+        </mypage-sidebar>
+
+        <mypage-content>
+          <div id="overview"><br>
+            <h2>Artifact-Based Rendering</h2>
+            <div class="first-image">
+                <img src="../images/thrusts/VisSoftwareArch/ABR-Overview.png">
+            </div>
+            <p class="big-paragraph">Artifact-Based Rendering (ABR) is a framework that includes tools and processes to enable digital visualizations to incorporate physical media. Created with artists and designers in mind, ABR is a technical foundation and the input channel for Sculpting Visualization’s project to enrich the visual vocabulary of scientific visualization through hand-crafted or naturally occurring objects. ABR bridges key barriers to incorporating artists and designers into visualization teams by enabling them to contribute their visual expertise without spending months learning software tools that currently limit the creative possibilities for their work.</p>
+          </div>
+          <div id="ExpandedVocab"><br>
+            <h2>Expanded Visualization Vocabularies</h2>
+            <div class="first-image">
+              <img src="../images/thrusts/VisSoftwareArch/ABR-expanded_vocab_teaser.png">
+              <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
+            </div>
+            <p class="big-paragraph">ABR enables artists and designers to leverage their practices in the visualization space. This capability includes expanding the visual vocabulary of scientific visualization—redefining the visual components used in data representations in a shift toward human- and nature-made glyphs, textures, lines and colors. This shift shortens the distance between data and the natural phenomena they represent and opens new possibilities for visually distinguishing and communicating intra-variate dynamics in complex visualizations.</p>
+            <div class="dual-images">
+               <div class="first-image">
+                   <img src="../images/thrusts/VisSoftwareArch/ABR-Expanded_Vocab_6.png">
+                   <h5>Other cool things.</h5>
+               </div>
+               <div class="second-image">
+                   <img src="../images/thrusts/VisSoftwareArch/ABR-Expanded_Vocab_3.png">
+                   <h5>Hey this is information that is cool and important.</h5>
+               </div>
+             </div>
+          </div>
+          <div id="interface"><br>
+            <h2>ABR Interface</h2>
+            <div class="first-image">
+                <img src="../images/thrusts/VisSoftwareArch/ABR-Interface_2.png">
+                <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
+            </div>
+            <p class="big-paragraph">Sculpting Visualization is a <a href="#">research project</a> that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
+          </div>
+          <div id="libraries"><br>
+            <h2>ABR Libraries</h2>
+            <div class="first-image">
+                <img src="../images/thrusts/VisSoftwareArch/ABR_libraries_1.png">
+                <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
+            </div>
+            <p class="big-paragraph">The ABR library catalogues glyphs, lines, colormaps, and textures created by Francesca Samsel, professional artist and co-PI of the Sculpting Vis Collaborative. Each of these assets is usable in the Artifact-Based Rendering program. Click here to access the online library of vis assets. </p>
+          </div>
+          <div id="applets"><br>
+            <h2>Applets</h2>
+            <div class="first-image">
+                <img src="../images/thrusts/VisSoftwareArch/ABR-applets.png">
+                <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
+            </div>
+            <div>
+              <p class="big-paragraph">
+                Generating dynamic vis assets for use in our ABR program may be a barrier for artists unfamiliar with programming architectures.
+                We created a series of Applets—ColorLoom, Infinite Line, Glyph Aligner, and Texture Mapper—to facilitate asset creation and easy import in ABR.
+              </p>
+              <p>
+                <h4 style="display: inline;">ColorLoom</h4> allows a user to generate custom colormaps with hues automatically pulled from imported images. This applet gives users looking to design a custom colormap a
+                dynamic starting point, and allows them to pull hues from imagery directly related to the dataset they are visualizing.
+              </p>
+              <p>
+                <h4 style="display: inline;">Infinite Line</h4> brings the physical artistic process into the visualization generation pipeline by allowing a user to sketch a line segment,
+                upload an image of the sketch, and turn that sketch into a continuous, unbroken, patterned streamline. The output file can be dragged directly into ABR for immediate use.
+              </p>
+            </div>
+            <div class="dual-images">
+              <div class="first-image">
+                <img src="../images/thrusts/VisSoftwareArch/ABR-Colorloom.png">
+                <h5>The Colorloom Applet interface</h5>
+              </div>
+              <div class="second-image">
+               <img src="../images/thrusts/VisSoftwareArch/ABR-infiniteline.png">
+               <h5>The Infinite Line Applet interface</h5>
+              </div>
+            </div>
+            <div>
+              <p>
+                <h4 style="display: inline;">Glyph Aligner,</h4> like Infinite Line, connects the physical artistic process with the digital.
+                When an artist creates a three-dimensional object, such as a small clay sculpture, they can 3D scan this object and drag it into Glyph Aligner.
+                Glyph Aligner allows users to give this 3D scan a directional quality. The output file can be dragged directly into ABR for immediate use as a glyph.
+              </p>
+              <p>
+                <h4 style="display: inline;">Texture Mapper</h4> shortens the space between the texture of the physical and digital worlds.
+                  A user may simply take a photo of any surface and upload that photo to texture mapper.
+                  The program automatically extracts the texture of the photo and produces a file output that can be dragged directly into ABR for immediate use as a texture for data surfaces in a visualization.
+              </p>
+            </div>
+            <div class="dual-images">
+              <div class="first-image">
+                <img src="../images/thrusts/VisSoftwareArch/ABR-glyphaligner.png">
+                <h5>The Glyph Aligner Applet interface</h5>
+              </div>
+              <div class="second-image">
+                <img src="../images/thrusts/VisSoftwareArch/ABR-texturemapper.png">
+                <h5>The Texture Mapper Applet interface</h5>
+              </div>
+            </div>
+          </div>
+          <div id="pubs"><br>
+            <h2>Publications</h2>
+            <ul>
+                <li>
+                    <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+                    <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+                    <i>IEEE Computer Graphics and Applications, 2021</i></p>
+                </li>
+                <li>
+                    <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+                    <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+                    <i>IEEE Computer Graphics and Applications, 2021</i></p>
+                </li>
+                <li>
+                    <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+                    <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+                    <i>IEEE Computer Graphics and Applications, 2021</i></p>
+                </li>
+                <li>
+                    <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+                    <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+                    <i>IEEE Computer Graphics and Applications, 2021</i></p>
+                </li>
+            </ul>
+          </div>
+          <div id="supporters">
+              <h2 id="support-title">This Research Thrust is Supported By</h2>
+              <ul>
+                  <li><a href="#">The National Science Foundation</a></li>
+                  <li><a href="#">The Foundation of Color</a></li>
+                  <li><a href="#">Smart People Association</a></li>
+              </ul>
+          </div>
+        </mypage-content>
+
+        <mypage-footer>
+          <footer>
+  <div class="footer-section thrusts">
+    <h1>Sculpting Visualizations Thrusts</h1>
+    <div class="footer-list">
+        <h2><a href="ABR.html">Artifact-Based Rendering</a></h2>
+        <ul>
+          <li><a href="ABR.html#overview">Artifact-Based Rendering</a></li>
+          <li><a href="ABR.html#ExpandedVocab">1. Expanded Visualization Vocabularies</a></li>
+          <li><a href="ABR.html#interface">2. ABR Interface</a></li>
+          <li><a href="ABR.html#libraries">3. ABR Libraries</a></li>
+          <li><a href="ABR.html#applets">4. Applets</a></li>
+          <li><a href="ABR.html#pubs">5. Publications</a></li>
+        </ul>
+    </div>
+    <div class="footer-list">
+        <h2><a href="AR-VR.html">AR, VR, Physicalization and Touch-Based Querying</a></h2>
+        <ul>
+          <li><a href="AR-VR.html#overview">AR, VR, Physicalization & Touch-Based Querying</a></li>
+          <li><a href="AR-VR.html#phys">1. Physicalization</a></li>
+          <li><a href="AR-VR.html#querying">2. Touch-Based Querying</a></li>
+          <li><a href="AR-VR.html#vr">3. VR</a></li>
+          <li><a href="AR-VR.html#ar">4. AR</a></li>
+          <li><a href="AR-VR.html#pubs">Publications and Support</a></li>
+        </ul>
+    </div>
+    <div class="footer-list">
+        <h2><a href="thrusts.html">Planetariums</a></h2>
+        <ul>
+            <li><a href="thrusts.html">Vis-By-Sketching</a></li>
+            <li><a href="thrusts.html">SciVisColor and Colormoves</a></li>
+        </ul>
+    </div>
+    <div class="footer-list">
+        <h2><a href="thrusts.html">Immersive Exhibitions</a></h2>
+        <ul>
+            <li><a href="thrusts.html">Vis-By-Sketching</a></li>
+            <li><a href="thrusts.html">SciVisColor and Colormoves</a></li>
+        </ul>
+    </div>
+    <div class="footer-list">
+        <h2><a href="thrusts.html">Evaluation</a></h2>
+        <ul>
+            <li><a href="thrusts.html">Vis-By-Sketching</a></li>
+            <li><a href="thrusts.html">SciVisColor and Colormoves</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-section apps">
+    <h1>Sculpting Visualizations Applications</h1>
+    <div class="footer-list">
+        <h2><a href="thrusts.html">Artifact-Based Rendering</a></h2>
+        <ul>
+            <li><a href="thrusts.html">Vocabularies for Scientific Visualization</a></li>
+            <li><a href="thrusts.html">Interface</a></li>
+            <li><a href="thrusts.html">Libraries</a></li>
+            <li><a href="thrusts.html">Applets</a></li>
+            <li><a href="thrusts.html">Dolly</a></li>
+        </ul>
+    </div>
+    <div class="footer-list">
+        <h2><a href="thrusts.html">AR, VR, Physicalization and Touch-Based Querying</a></h2>
+        <ul>
+            <li><a href="thrusts.html">Vocabularies for Scientific Visualization</a></li>
+            <li><a href="thrusts.html">Interface</a></li>
+            <li><a href="thrusts.html">Libraries</a></li>
+            <li><a href="thrusts.html">Applets</a></li>
+            <li><a href="thrusts.html">Dolly</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-section projects">
+    <h1>Related Projects</h1>
+    <div class="footer-list">
+        <ul>
+            <li><a href="thrusts.html">Vis-By-Sketching</a></li>
+            <li><a href="thrusts.html">SciVisColor and Colormoves</a></li>
+            <li><a href="thrusts.html">Indigenous Futures</a></li>
+            <li><a href="thrusts.html">VMail</a></li>
+            <li><a href="thrusts.html">Boxcars and Potatoes</a></li>
+        </ul>
+    </div>
+</div>
+</footer>
+<p><b>Sculpting Visualizations</b> &copy; 2021</p>
+
+        </mypage-footer>
+      </mypage>
+      <script src="" async defer></script>
+    </body>
+</html>

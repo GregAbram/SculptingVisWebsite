@@ -1,9 +1,8 @@
 @import 'variables';
 
 .titlebar {
-    left: 3.5%;
-    right: 3.5%;
-    height: 65px;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
     background-color: $light;
     z-index: 999;
 }
