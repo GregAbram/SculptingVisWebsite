@@ -2,11 +2,15 @@
 # SculptingVis
 
 ## Developer Dependencies
-[Sass](https://sass-lang.com/) is the only dependency used. Click [here](https://sass-lang.com/install) to install Sass.
+[Sass](https://sass-lang.com/) and [Node.js](https://nodejs.org/en/download) are developer dependencies. Click [here](https://sass-lang.com/install) to install Sass and [here](https://nodejs.org/en/download) to install Node.js.
 
-To allow sass to track changes and generate css to the `dist` folder, run `sass --watch ./sass:dist/css`.
+Sass is a preprocessor for css, and Node.js uses [nunjucks](https://mozilla.github.io/nunjucks/) to preprocess .njk files to html.   In this project, sass and nunjuck sourcefiles (extensions scss and njk) are in the scss and njk directories respectively.  A Makefile in the root directory applies these preprocessing steps and places the resolts in the html and css directories.  *When you add/change files in the scss and njk directories, you will need to run* ***make*** *in the root directory*.
 
-Sass is a developer dependency. Styling changes will be exported to the `dist` folder in the file tree.
+After you make changes to sass and nunjucks source files, run make and commit.  This will keep the css and html directories up to date so a clean checkout can be immediately used.
+
+## Updating Navigation
+
+Pointers to each page (and subsections, as appropriate) should be added in two places: the lists.njk directory, which is the site map found under the toolbar's **Thrusts & Apps** button, and html/footer.html, which is the directory that appears at the bottom of each page.   When these files are changes, you need to run **make**.
 
 ## Page Assets
 Here are a list of re-usable assets for each thrust and application page. Unique sections are usually marked with a css `id` instead of a`class`.
