@@ -10,104 +10,209 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        {% include "html/header.html" %}
 
-        <!-- Container to create the sidebar and main page content. -->
-        <div id="page-container">
+    <thrust-nav>
+      {% include "html/header.html" %}
+    </thrust-nav>
 
-            <div id="sidebar">
-                <div class="sticky">
-                    <h1>Planetariums</h1>
-                    <h2>Camera Tracking</h2>
-                    <ul>
-                        <li><a href="#overview">Thrust Overview</a></li>
-                        <li><a href="#physicalization">1. Physicalization of Physical Particles</a></li>
-                        <li><a href="#following-po">2. Following Physical Objects</a></li>
-                        <li><a href="#future-obj">3. Future Objects to Follow</a></li>
-                        <li><a href="#contributors">Contributors</a></li>
-                        <li><a href="#pubs">Publications</a></li>
-                        <li><a href="#support">Support</a></li>
+    <thrust-page>
 
-                    </ul>
-                </div>
+        <thrust-content>
+        <div id="overview">
+          <h2>Climate Prisms</h2>
+          <div class="single-image">
+              <div class="first-image">
+                  <img src="../images/thrusts/Immersive-Exhibitions/cp_2.jpeg">
+                  <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
+              </div>
+          </div>
+          <p class="big-paragraph">The Arctic is about bridging the distance between the physical
+            world and scientific visualization through multiple approachable modalities pulled
+            from both the world of art and the world of science. The original project was intended
+            as a museum exhibition focused on climate science research conducted in the Arctic and
+            featuring a large display screen driven by a touch interface designed for individual or
+            small group viewing. Content paths were determined by an underlying system of tags, levels,
+            content categories and related research areas. A screen showed a set of images. Each image
+            could be accessed to provide image-specific information or could act as a launching pad for
+            a new set of related content and images that allows the user to continue on their exploration
+            journey. Each person created a unique path through hundreds of pieces of climate content.
+            Embedded assessments logged basic demographics of each individual that interacted with the work.
+            Each participant was able to plot their own path through the complex science, moving through
+            the content at the pace and level of detail that best enabled them to engage with the material. </p>
+          <div class="single-image">
+              <div class="first-image">
+                  <img src="../images/thrusts/Immersive-Exhibitions/climateprisms_1.jpeg">
+                  <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
+              </div>
+          </div>
+        </div>
+        <div id="physicalization">
+          <h2>Physicalization</h2>
+          <p>The project has grown with the Sculpting Vis collaborative to incorporate
+            new tools and research directions. The ongoing focus of this project is
+            physical + digital immersive spaces that allow visitors to interact with
+            data, imagery, poetry, and both human and natural artifacts to draw
+            connections within and between their everyday lives and the devastating
+            effects of rapid climate change on the other side of the planet.
+          <div class="single-image">
+              <div class="first-image">
+                  <img src="../images/thrusts/Immersive-Exhibitions/CP2.jpeg">
+                  <h5>Fig. of a really badass render to show how color should be used
+                    to graph field data.</h5>
+              </div>
+          </div>
+        </div>
+        <div id="cp-immersive">
+          <h2>Immersive Exhibit</h2>
+          <div class="single-image">
+              <div class="first-image">
+                  <img src="../images/thrusts/Immersive-Exhibitions/CPoverview.jpeg">
+                  <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
+              </div>
+          </div>
+          <p>Sculpting Visualization is a <a href="#">research project</a> that brings
+             art and design theory and practice to visualization. Drawing on the expertise
+             of a multidisciplinary team, Sculpting Visualization describes an ethos, a
+             set of technical tools and interfaces, and resources to advance data visualization
+             via 3D, augmented reality, virtual reality, and data physicalization technology.
+             Sculpting Visualization describes an ethos, a set of technical tools and interfaces,
+              and resources to advance data visualization via 3D, augmented reality, virtual
+              reality, and data physicalization technology.</p>
+
+          <div class="single-image">
+              <div class="first-image">
+                  <img src="../images/thrusts/Immersive-Exhibitions/immersive_3.jpeg">
+                  <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
+              </div>
+          </div>
+        </div>
+        <div id="cp-social">
+          <h2>Social Media</h2>
+          <p>The project has grown with the Sculpting Vis collaborative to incorporate new tools and research directions. The ongoing focus of this project is physical + digital immersive spaces that allow visitors to interact with data, imagery, poetry, and both human and natural artifacts to draw connections within and between their everyday lives and the devastating effects of rapid climate change on the other side of the planet.
+          <div class="dual-images">
+            <div class="first-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_1.jpeg">
+              <h5>Other cool things.</h5>
             </div>
-            <div id="content">
-              <div  id="overview"><br>
-                <h3>Thrust Overview</h3>
-                <p class="big-paragraph">Sculpting Visualization is a research project that brings <a href="#">art and design theory</a> and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-                <div class="dual-images">
-                    <div class="first-image">
-                        <img src="../images/sample.jpg">
-                        <h5>Other cool things.</h5>
-                    </div>
-                    <div class="second-image">
-                        <img src="../images/sample.jpg">
-                        <h5>Hey this is information that is cool and important.</h5>
-                    </div>
-                </div>
-              </div>
-              <div  id="physicalization"><br>
-                <h3>Physicalization of Physical Particles</h3>
-                <p>Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-                <p>Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-                <div class="single-image">
-                    <div class="first-image">
-                        <img src="../images/hero.jpg">
-                        <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
-                    </div>
-                </div>
-              </div>
-              <div h3 id="following-po"><br>
-                <h3>Following Physical Objects</h3>
-                <p>Sculpting Visualization is a <a href="#">research project</a> that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-                <h3 id="future-obj">Future Objects to Follow</h3>
-                <p class="big-paragraph">Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-                <div id="contributors">
-                    <h3>Contributors</h3>
-                    <ul>
-                        <li>Stephanie Zeller</li>
-                        <li><a href="#">Francesca Samsel</a></li>
-                        <li><a href="#">Greg Abram</a></li>
-                        <li><a href="#">Daniel Keefe</a></li>
-                    </ul>
-                </div>
-              </div>
-              <div id="pubs">
-                <h3>Sources</h3>
-                <ul>
-                    <li>
-                        <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
-                        <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
-                        <i>IEEE Computer Graphics and Applications, 2021</i></p>
-                    </li>
-                    <li>
-                        <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
-                        <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
-                        <i>IEEE Computer Graphics and Applications, 2021</i></p>
-                    </li>
-                    <li>
-                        <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
-                        <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
-                        <i>IEEE Computer Graphics and Applications, 2021</i></p>
-                    </li>
-                    <li>
-                        <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
-                        <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
-                        <i>IEEE Computer Graphics and Applications, 2021</i></p>
-                    </li>
-                  </ul>
-              </div>
-              <div id="supporters">
-                  <h3 id="support-title">This Research Thrust is Supported By</h3>
-                  <ul>
-                      <li><a href="#">The National Science Foundation</a></li>
-                      <li><a href="#">The Foundation of Color</a></li>
-                      <li><a href="#">Smart People Association</a></li>
-                  </ul>
+            <div class="second-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_2.jpeg">
+              <h5>Hey this is information that is cool and important.</h5>
+            </div>
+          </div>
+          <div class="dual-images">
+            <div class="first-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_3.jpeg">
+              <h5>Other cool things.</h5>
+            </div>
+            <div class="second-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_4.jpeg">
+              <h5>Hey this is information that is cool and important.</h5>
+            </div>
+          </div>
+          <div class="dual-images">
+            <div class="first-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_5.jpeg">
+              <h5>Other cool things.</h5>
+            </div>
+            <div class="second-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_6.jpeg">
+              <h5>Hey this is information that is cool and important.</h5>
+            </div>
+          </div>
+          <div class="dual-images">
+            <div class="first-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_7.jpeg">
+              <h5>Other cool things.</h5>
+            </div>
+            <div class="second-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_8.jpeg">
+              <h5>Hey this is information that is cool and important.</h5>
+            </div>
+          </div>
+          <div class="dual-images">
+            <div class="first-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_9.jpeg">
+              <h5>Other cool things.</h5>
+            </div>
+            <div class="second-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_10.jpeg">
+              <h5>Hey this is information that is cool and important.</h5>
+            </div>
+          </div>
+          <div class="dual-images">
+            <div class="first-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_11.jpeg">
+              <h5>Other cool things.</h5>
+            </div>
+            <div class="second-image">
+              <img src="../images/thrusts/Immersive-Exhibitions/ig_12.jpeg">
+              <h5>Hey this is information that is cool and important.</h5>
+            </div>
+          </div>
+          <div class="dual-images">
+              <div class="first-image">
+                <img src="../images/thrusts/Immersive-Exhibitions/ig_13.jpeg">
+                <h5>Other cool things.</h5>
               </div>
             </div>
         </div>
+        <div id="pubs">
+          <h2>Publications and Support</h2>
+          <ul>
+            <li>
+              <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+              <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+              <i>IEEE Computer Graphics and Applications, 2021</i></p>
+            </li>
+            <li>
+              <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+              <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+              <i>IEEE Computer Graphics and Applications, 2021</i></p>
+            </li>
+            <li>
+              <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+              <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+              <i>IEEE Computer Graphics and Applications, 2021</i></p>
+            </li>
+            <li>
+              <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+              <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+              <i>IEEE Computer Graphics and Applications, 2021</i></p>
+            </li>
+          </ul>
+        </div>
+        <div id="support">
+          <h3 id="support-title">This Research Thrust is Supported By</h3>
+          <ul>
+            <li><a href="#">The National Science Foundation</a></li>
+            <li><a href="#">The Foundation of Color</a></li>
+            <li><a href="#">Smart People Association</a></li>
+          </ul>
+        </div>
+      </thrust-content>
+
+      <thrust-sidebar>
+        <div>
+            <h1>Immersive Exhibitions</h1>
+            <h2>Climate Prisms</h2>
+            <ul>
+                <li><a href="#overview">Climate Prisms</a></li>
+                <li><a href="#physicalization">Physicalization</a></li>
+                <li><a href="#cp-immersive">Immersive Exhibit</a></li>
+                <li><a href="#cp-social">Social Media</a></li>
+                <li><a href="#pubs">Publications</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </div>
+      </thrust-sidebar>
+
+
+      <thrust-footer>
         {% include "html/footer.html" %}
-        <script src="" async defer></script>
-    </body>
+      </thrust-footer>
+
+    </thrust-page>
+
+    <!-- <script src="" async defer></script> -->
+  </body>
 </html>
