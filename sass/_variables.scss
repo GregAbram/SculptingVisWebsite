@@ -24,9 +24,9 @@ $publication-margin: 7%;
 
 
 //MEDIA QUERIES
-$desktop-width: 1440px;
-$laptop-width: 769px;
-$tablet-width: 426px;
+$desktop-width: 2560px;
+$laptop-width:  769px;
+$tablet-width:  400px;
 
 @mixin desktop {
     @media (min-width: #{$desktop-width}) {
