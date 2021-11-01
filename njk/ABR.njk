@@ -12,7 +12,7 @@
     <body>
 
       <thrust-nav>
-        {% include "html/header.html" %}
+        {% include "njk/header.html" %}
       </thrust-nav>
 
       <thrust-page>
@@ -28,7 +28,9 @@
                 <li><a href="#interface">ABR Interface</a></li>
                 <li><a href="#libraries">ABR Libraries</a></li>
                 <li><a href="#applets">Applets</a></li>
+                <li><a href="#resources">Resources</a></li>
                 <li><a href="#pubs">Publications</a></li>
+                <li><a href="#support">Support</a></li>
             </ul>
           </div>
         </thrust-sidebar>
@@ -161,7 +163,15 @@
                 </div>
               </div>
             </div>
-            <div id="pubs"><
+            <div id="resources">
+              <h2>Resources</h2>
+              <ul>
+                <li><a href="http://sculptingvis/applets/">Artifact Assets</a></li>
+                <li><a href="http://sculptingvis/library/">Artifact Library</a></li>
+                <li><a href="http://sculptingvis/applets/">Code</a></li>
+              </ul>
+            </div>
+            <div id="pubs">
               <h2>Publications</h2>
               <ul>
                   <li>
@@ -186,7 +196,7 @@
                   </li>
               </ul>
             </div>
-            <div id="supporters">
+            <div id="support">
               <h2 id="support-title">This Research Thrust is Supported By</h2>
               <ul>
                   <li><a href="#">The National Science Foundation</a></li>
@@ -197,7 +207,7 @@
         </thrust-content>
 
         <thrust-footer>
-          {% include "html/footer.html" %}
+          {% include "njk/footer.html" %}
         </thrust-footer>
 
       </thrust-page>

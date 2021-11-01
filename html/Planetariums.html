@@ -10,7 +10,9 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-      <div>
+
+      <thrust-nav>
+        <div>
   <div class="titlebar">
     <div class="titlebar-grid">
       <div class="titlebar-title"><a href="index.html">SculptingVis</a></div>
@@ -22,185 +24,178 @@
   <hr>
 </div>
 
-        <div class="navigation">
+      </thrust-nav>
 
-        </div>
+      <thrust-page>
 
-        <!-- Container to create the sidebar and main page content. -->
-        <div id="page-container">
+        <thrust-sidebar>
+          <div>
+              <h1>Immersive Exhibitions</h1>
+              <h2>Planetariums</h2>
+              <ul>
+                  <li><a href="#overview">Thrust Overview</a></li>
+                  <li><a href="#physicalization">Physicalization of Physical Particles</a></li>
+                  <li><a href="#pubs">Publications</a></li>
+                  <li><a href="#support">Support</a></li>
+              </ul>
+          </div>
+        </thrust-sidebar>
 
-            <div id="sidebar">
-                <div class="sticky">
-                    <h1>Planetariums</h1>
-                    <h2>Camera Tracking</h2>
-                    <ul>
-                        <li><a href="#overview">Thrust Overview</a></li>
-                        <li><a href="#physicalization">1. Physicalization of Physical Particles</a></li>
-                        <li><a href="#following-po">2. Following Physical Objects</a></li>
-                        <li><a href="#future-obj">3. Future Objects to Follow</a></li>
-                        <li><a href="#contributors">Contributors</a></li>
-                        <li><a href="#sources-support">Sources and Support</a></li>
-                    </ul>
-                </div>
+        <thrust-content>
+            <div id="Overview">
+              <h2 id="overview">Thrust Overview</h2>
+              <p class="big-paragraph">Sculpting Visualization is a research project that brings <a href="#">art and design theory</a> and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
+              <div class="dual-images">
+                  <div class="first-image">
+                      <img src="../images/sample.jpg">
+                      <h5>Other cool things.</h5>
+                  </div>
+                  <div class="second-image">
+                      <img src="../images/sample.jpg">
+                      <h5>Hey this is information that is cool and important.</h5>
+                  </div>
+              </div>
             </div>
-            <div id="content">
-                <h3 id="overview">Thrust Overview</h3>
-                <p class="big-paragraph">Sculpting Visualization is a research project that brings <a href="#">art and design theory</a> and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-                <div class="dual-images">
-                    <div class="first-image">
-                        <img src="../images/sample.jpg">
-                        <h5>Other cool things.</h5>
-                    </div>
-                    <div class="second-image">
-                        <img src="../images/sample.jpg">
-                        <h5>Hey this is information that is cool and important.</h5>
-                    </div>
-                </div>
-                <h3 id="physicalization">Physicalization of Physical Particles</h3>
-                <p>Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-                <p>Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-                <div class="single-image">
-                    <div class="first-image">
-                        <img src="../images/hero.jpg">
-                        <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
-                    </div>
-                </div>
-                <h3 id="following-po">Following Physical Objects</h3>
-                <p>Sculpting Visualization is a <a href="#">research project</a> that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-                <h3 id="future-obj">Future Objects to Follow</h3>
-                <p class="big-paragraph">Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-                <div id="contributors">
-                    <h3>Contributors</h3>
-                    <ul>
-                        <li>Stephanie Zeller</li>
-                        <li><a href="#">Francesca Samsel</a></li>
-                        <li><a href="#">Greg Abram</a></li>
-                        <li><a href="#">Daniel Keefe</a></li>
-                    </ul>
-                </div>
-                <div id="sources">
-                    <h3>Sources</h3>
-                    <ul>
-                        <li>
-                            <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
-                            <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
-                            <i>IEEE Computer Graphics and Applications, 2021</i></p>
-                        </li>
-                        <li>
-                            <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
-                            <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
-                            <i>IEEE Computer Graphics and Applications, 2021</i></p>
-                        </li>
-                        <li>
-                            <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
-                            <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
-                            <i>IEEE Computer Graphics and Applications, 2021</i></p>
-                        </li>
-                        <li>
-                            <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
-                            <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
-                            <i>IEEE Computer Graphics and Applications, 2021</i></p>
-                        </li>
-                    </ul>
-                </div>
-                <div id="supporters">
-                    <h3 id="support-title">This Research Thrust is Supported By</h3>
-                    <ul>
-                        <li><a href="#">The National Science Foundation</a></li>
-                        <li><a href="#">The Foundation of Color</a></li>
-                        <li><a href="#">Smart People Association</a></li>
-                    </ul>
-                </div>
+            <div id="physicalization">
+              <h2>Physicalization of Physical Particles</h2>
+              <p>Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
+              <p>Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
+              <div class="single-image">
+                  <div class="first-image">
+                      <img src="../images/hero.jpg">
+                      <h5>Fig. of a really badass render to show how color should be used to graph field data.</h5>
+                  </div>
+              </div>
+              <h3 id="following-po">Following Physical Objects</h3>
+              <p>Sculpting Visualization is a <a href="#">research project</a> that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
+              <h3 id="future-obj">Future Objects to Follow</h3>
+              <p class="big-paragraph">Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
+              <div id="contributors">
+                  <h3>Contributors</h3>
+                  <ul>
+                      <li>Stephanie Zeller</li>
+                      <li><a href="#">Francesca Samsel</a></li>
+                      <li><a href="#">Greg Abram</a></li>
+                      <li><a href="#">Daniel Keefe</a></li>
+                  </ul>
+              </div>
             </div>
-        </div>
+            <div id=pubs>
+              <h2>Publications</h2>
+              <ul>
+                  <li>
+                      <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+                      <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+                      <i>IEEE Computer Graphics and Applications, 2021</i></p>
+                  </li>
+                  <li>
+                      <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+                      <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+                      <i>IEEE Computer Graphics and Applications, 2021</i></p>
+                  </li>
+                  <li>
+                      <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+                      <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+                      <i>IEEE Computer Graphics and Applications, 2021</i></p>
+                  </li>
+                  <li>
+                      <h4><a href="#">Antarctic Water Masses and Ice Shelves Visualizing the Physics</a><a class="doi" href="#">DOI</a></h4>
+                      <p>Greg Abram, Francesca Samsel, Mark R Petersen, Xylar Asay-Davis, Darin Comeau, Stephen F Price <br/>
+                      <i>IEEE Computer Graphics and Applications, 2021</i></p>
+                  </li>
+              </ul>
+            </div>
+            <div id="supporters">
+              <h2 id="support-title">Supported</h2>
+              <ul>
+                  <li><a href="#">The National Science Foundation</a></li>
+                  <li><a href="#">The Foundation of Color</a></li>
+                  <li><a href="#">Smart People Association</a></li>
+              </ul>
+            </div>
+          </thrust-content>
 
-        <footer>
-  <div class="footer-section thrusts">
-    <h1>Sculpting Visualizations Thrusts</h1>
-    <div class="footer-list">
-        <h2><a href="ABR.html">Artifact-Based Rendering</a></h2>
-        <ul>
-          <li><a href="ABR.html#overview">Artifact-Based Rendering</a></li>
-          <li><a href="ABR.html#ExpandedVocab">1. Expanded Visualization Vocabularies</a></li>
-          <li><a href="ABR.html#interface">2. ABR Interface</a></li>
-          <li><a href="ABR.html#libraries">3. ABR Libraries</a></li>
-          <li><a href="ABR.html#applets">4. Applets</a></li>
-          <li><a href="ABR.html#pubs">5. Publications</a></li>
-        </ul>
+          <thrust-footer>
+            <footer style="text-align: center">
+  <div class=footer-thrusts>
+    <div class=footer-section-title>
+      Thrusts
     </div>
-    <div class="footer-list">
-        <h2><a href="AR-VR.html">AR, VR, Physicalization and Touch-Based Querying</a></h2>
-        <ul>
-          <li><a href="AR-VR.html#overview">AR, VR, Physicalization & Touch-Based Querying</a></li>
-          <li><a href="AR-VR.html#phys">1. Physicalization</a></li>
-          <li><a href="AR-VR.html#querying">2. Touch-Based Querying</a></li>
-          <li><a href="AR-VR.html#vr">3. VR</a></li>
-          <li><a href="AR-VR.html#ar">4. AR</a></li>
-          <li><a href="AR-VR.html#pubs">Publications and Support</a></li>
-        </ul>
+    <div class=footer-section style="grid-area: ABR;">
+      <h2><a href="ABR.html#overview">Artifact-Based Rendering</a></h2>
+      <ul>
+        <li><a href="ABR.html#overview">Overview</a></li>
+        <li><a href="ABR.html#ExpandedVocab">Expanded Visualization Vocabularies</a></li>
+        <li><a href="ABR.html#interface">ABR Interface</a></li>
+        <li><a href="ABR.html#libraries">ABR Libraries</a></li>
+        <li><a href="ABR.html#applets">Applets</a></li>
+        <li><a href="ABR.html#resources">Resources</a></li>
+        <li><a href="ABR.html#pubs">Publications</a></li>
+      </ul>
     </div>
-    <div class="footer-list">
-        <h2><a href="thrusts.html">Planetariums</a></h2>
-        <ul>
-            <li><a href="thrusts.html">Vis-By-Sketching</a></li>
-            <li><a href="thrusts.html">SciVisColor and Colormoves</a></li>
-        </ul>
+    <div class=footer-section style="grid-area: ARVR;">
+      <h2>AR, VR, Physicalization,<br>and Touch-Based Querying</h2>
+      <ul>
+        <li><a href="AR-VR.html#overview">Overview</a></li>
+        <li><a href="AR-VR.html#phys">Physicalization</a></li>
+        <li><a href="AR-VR.html#querying">Touch-Based Querying</a></li>
+        <li><a href="AR-VR.html#vr">VR</a></li>
+        <li><a href="AR-VR.html#ar">AR</a></li>
+        <li><a href="AR-VR.html#pubs">Publications and Support</a></li>
+      </ul>
     </div>
-    <div class="footer-list">
-        <h2><a href="thrusts.html">Immersive Exhibitions</a></h2>
-        <ul>
-            <li><a href="thrusts.html">Vis-By-Sketching</a></li>
-            <li><a href="thrusts.html">SciVisColor and Colormoves</a></li>
-        </ul>
+    <div class=footer-section style="grid-area: Imm;">
+      <h2>Immersive Exhibitions</h2>
+      <ul>
+        <li><a href="ClimatePrisms.html">Climate Prisms</a></li>
+        <li><a href="Planetariums.html">Planetariums</a></li>
+      </ul>
     </div>
-    <div class="footer-list">
-        <h2><a href="thrusts.html">Evaluation</a></h2>
-        <ul>
-            <li><a href="thrusts.html">Vis-By-Sketching</a></li>
-            <li><a href="thrusts.html">SciVisColor and Colormoves</a></li>
-        </ul>
+    <div class=footer-section style="grid-area: Eval;">
+      <h2>Evaluation</h2> 
+      <ul>
+        <li><a href="CloseReading.html">Close Reading for Visualization Evaluation</a></li>
+      </ul>
     </div>
-</div>
-<div class="footer-section apps">
-    <h1>Sculpting Visualizations Applications</h1>
-    <div class="footer-list">
-        <h2><a href="thrusts.html">Artifact-Based Rendering</a></h2>
-        <ul>
-            <li><a href="thrusts.html">Vocabularies for Scientific Visualization</a></li>
-            <li><a href="thrusts.html">Interface</a></li>
-            <li><a href="thrusts.html">Libraries</a></li>
-            <li><a href="thrusts.html">Applets</a></li>
-            <li><a href="thrusts.html">Dolly</a></li>
-        </ul>
+  </div>
+  <div class="footer-collabs">
+    <div class=footer-section-title>
+      Related Projects
     </div>
-    <div class="footer-list">
-        <h2><a href="thrusts.html">AR, VR, Physicalization and Touch-Based Querying</a></h2>
-        <ul>
-            <li><a href="thrusts.html">Vocabularies for Scientific Visualization</a></li>
-            <li><a href="thrusts.html">Interface</a></li>
-            <li><a href="thrusts.html">Libraries</a></li>
-            <li><a href="thrusts.html">Applets</a></li>
-            <li><a href="thrusts.html">Dolly</a></li>
-        </ul>
+    <div>
+      <ul>
+          <li><a href="VisBySketching.html">VisBySketching</a></li>
+          <li><a href="SciVisColor.html">SciVisColor</a></li>
+          <li><a href="IndigenousFutures.html">Indigenous Futures</a></li>
+          <li><a href="VMail.html">VMail</a></li>
+          <li><a href="BoxcarsAndPotatoes.html">Boxcars and Potatoes</a></li>
+      </ul>
     </div>
-</div>
-<div class="footer-section projects">
-    <h1>Related Projects</h1>
-    <div class="footer-list">
-        <ul>
-            <li><a href="ClimatePrisms.html">Climate Prisms</a></li>
-            <li><a href="thrusts.html">Vis-By-Sketching</a></li>
-            <li><a href="thrusts.html">SciVisColor and Colormoves</a></li>
-            <li><a href="thrusts.html">Indigenous Futures</a></li>
-            <li><a href="thrusts.html">VMail</a></li>
-            <li><a href="thrusts.html">Boxcars and Potatoes</a></li>
-        </ul>
+  </div>
+  <div class="footer-projects">
+    <div class=footer-section-title>
+      Domain Science Collaborations
     </div>
-</div>
+    <div>
+      <ul>
+          <li><a href="Brain.html">Brain</a></li>
+          <li><a href="DinoBones.html">Dino Bones</a></li>
+          <li><a href="GulfOfMexico.html">Gulf Of Mexico</a></li>
+          <li><a href="Antarctic.html">Antarctic</a></li>
+          <li><a href="MRI.html">MRI</a></li>
+          <li><a href="WITU.html">Water In The Universe</a></li>
+      </ul>
+    </div>
+  </div>
 </footer>
-<p><b>Sculpting Visualizations</b> &copy; 2021</p>
+<div style="text-align: center">
+  <p><b>Sculpting Visualizations</b> &copy; 2021</p>
+</div>
 
+          </thrust-footer>
+
+        </thrust-page>
 
         <script src="" async defer></script>
-    </body>
-</html>
+      </body>
+  </html>

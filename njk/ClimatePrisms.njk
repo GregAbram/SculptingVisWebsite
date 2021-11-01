@@ -12,10 +12,26 @@
     <body>
 
     <thrust-nav>
-      {% include "html/header.html" %}
+      {% include "njk/header.html" %}
     </thrust-nav>
 
     <thrust-page>
+
+        <thrust-sidebar>
+          <div>
+              <h1>Immersive Exhibitions</h1>
+              <h2>Climate Prisms</h2>
+              <ul>
+                  <li><a href="#overview">Climate Prisms</a></li>
+                  <li><a href="#physicalization">Physicalization</a></li>
+                  <li><a href="#cp-immersive">Immersive Exhibit</a></li>
+                  <li><a href="#cp-social">Social Media</a></li>
+                  <li><a href="#pubs">Publications</a></li>
+                  <li><a href="#support">Support</a></li>
+              </ul>
+          </div>
+        </thrust-sidebar>
+
 
         <thrust-content>
         <div id="overview">
@@ -191,24 +207,8 @@
         </div>
       </thrust-content>
 
-      <thrust-sidebar>
-        <div>
-            <h1>Immersive Exhibitions</h1>
-            <h2>Climate Prisms</h2>
-            <ul>
-                <li><a href="#overview">Climate Prisms</a></li>
-                <li><a href="#physicalization">Physicalization</a></li>
-                <li><a href="#cp-immersive">Immersive Exhibit</a></li>
-                <li><a href="#cp-social">Social Media</a></li>
-                <li><a href="#pubs">Publications</a></li>
-                <li><a href="#support">Support</a></li>
-            </ul>
-        </div>
-      </thrust-sidebar>
-
-
       <thrust-footer>
-        {% include "html/footer.html" %}
+        {% include "njk/footer.html" %}
       </thrust-footer>
 
     </thrust-page>
