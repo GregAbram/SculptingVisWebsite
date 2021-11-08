@@ -1,4 +1,10 @@
+from __future__ import print_function
+import os, sys
 from glob import glob
+from bibtexparser import load
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
 
 top = [
 '<!DOCTYPE html>',
@@ -14,81 +20,91 @@ top = [
 '  </head>',
 '  <body>',
 '    {% include "njk/header.html" %}',
-'    <section>'
+'    <publication-body>'
 ]
 
 bottom = [
-'    </section>',
+'    </publication-body>',
 '    {% include "njk/footer.html" %}',
 '    <script src="" async defer></script>',
 '  </body>',
 '</html>'
 ]
 
-year_section_top = '            <div class="section-title"><h1>%s</h1></div>'
-year_section_bottom   = '            </div>'
-
 def add_pub(year, title):
-  print('              <div class="section-wrapper" id="%s %s"' % (year, title))
-  print('                <div class="subsection">')
-  print('                  <div class="publication-wrapper">')
-  print('                    <div class="publication">')
-  print('                      <img src="../publications/%s/%s/image.png" alt="%s"/>' % (year, title, title))
-  print('                      <div class="desc">')
-  pdf = glob('publications/%s/%s/article.pdf' % (year, title))
-  if len(pdf) == 1:
-    print('                        <h3><a href="../publications/%s/%s/article.pdf" target="_blank">%s</a></h3>' % (year, title, title))
+  print('        <pub id="%s %s">' % (year, title))
+  print('          <div class=pubimg>')
+  print('            <img  class=pubimg src="../publications/%s/%s/image.png" alt="%s"/>' % (year, title, title))
+  print('          </div>')
+  print('          <div class="pubtxt">')
+  print('            <p>')
+
+  cfile = 'publications/%s/%s/pub.bib' % (year, title)
+  if os.path.isfile(cfile):
+
+    with open(cfile) as cf:
+      citation = load(cf).entries[0]
+
+    if 'author' in citation:
+      print('<span class=authors>%s</span>' % citation['author'])
+    else:
+      print('(no authors)')
+
+    if 'year' in citation:
+      print('(%s).' % citation['year'])
+    else:
+      print('.')
+
+    if 'title' in citation:
+      title = citation['title']
+
+    print('<span class=title>')
+    if 'url' in citation:
+      print('<a href="%s" target="_blank">%s</a>' % (citation['url'], title))
+    else:
+      print('%s' % title)
+    print('</span>')
+
+    print('<span class=source>')
+
+    if 'journal' in citation:
+      print(',%s' % citation['journal'])
+
+    if 'volume' in citation:
+      print(', vol. %s' % (citation['volume']))
+
+    if 'number' in citation:
+      print(', no. %s' % (citation['number']))
+
+    if 'pages' in citation:
+      print(', (%s)' % (citation['pages']))
+
+    print('</span>')
+
   else:
-    print('                        <h3>%s</h3>' % title)
-  print('                        <p>')
-  afile = glob('publications/%s/%s/authors' % (year, title))
-  if len(afile) == 1:
-    authors = []
-    f = open(afile[0]);
-    for line in f:
-      authors = authors + line.strip().split(';')
-    f.close()
-    print('                        %s; ' % ','.join(['<span> %s</span>' % a for a in authors]))
-  else:
-    print('                        (no authors)')
-  jfile = glob('publications/%s/%s/venue' % (year, title))
-  if len(jfile) == 1:
-    f = open(jfile[0]);
-    venue = f.readline().strip()
-    f.close()
-    print('                        <i>%s</i>' % venue)
-  else:
-    print('                        <i>(no venue)</i>')
-  cite = glob('publications/%s/%s/citation.tex' % (year, title))
-  if len(cite) == 1:
-    print('                        <a href="../publications/%s/%s/citation.tex" target="_blank">  Cite  </a>' % (year, title))
-  else:
-    print('                        <h3>  No Cite </h3>')
-  dfile = glob('publications/%s/%s/doi' % (year, title))
-  if len(dfile) == 1:
-    f = open(dfile[0]);
-    doi = f.readline().strip()
-    f.close()
-    print('                        DOI %s' % doi)
-  else:
-    print('                        <h3>No DOI</h3>')
-  print('                        </p>')
-  print('                      </div>')
-  print('                    </div>')
-  print('                  </div>')
-  print('                </div>')
-  print('              </div>')
-  print('            </div>')
+    print('<span class=pub_title>%s</span>. No citation.' % title)
+
+  print('            </p>')
+  print('          </div>')
+  print('        </pub>')
 
 print("\n".join(top))
 
-for year in sorted([i.split('/')[-1] for i in glob('publications/*')])[-1:]:
-  print(year_section_top % year)
+for year in sorted([i.split('/')[-1] for i in glob('publications/*')]):
+
+  eprint('YEAR %s' % year)
+
+  print('            <year>')
+  print('              <label><h1>%s</h1></label>' % year)
+  print('              <pubs>')
+
   titles = sorted([i.split('/')[-1] for i in glob('publications/%s/*' % year)])
   if len(titles) > 0:
-    for title in titles[:1]:
+    for title in titles:
+      eprint('TITLE %s' % title)
       add_pub(year, title)
 
-  print(year_section_bottom)
+  print('              </pubs>')
+  print('            </year>')
 
 print("\n".join(bottom))

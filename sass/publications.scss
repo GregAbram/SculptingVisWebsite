@@ -11,7 +11,7 @@ section {
 
     .section-title {
 
-        h1 { 
+        h1 {
             position: sticky;
             top: 95px;
             text-align: right;
@@ -31,7 +31,7 @@ section {
             font-size: 10px;
             width: 100px;
         }
-        
+
         .publication {
             display: grid;
             grid-template-columns: auto 1fr;
@@ -39,17 +39,17 @@ section {
             column-gap: 40px;
             margin-bottom: 24px;
             margin-left: $publication-margin;
-    
+
             img {
                 grid-area: img;
             }
-    
+
             .desc {
                 grid-area: desc;
-    
+
                 h3 {
                     font-size: 16px;
-        
+
                     a {
                         font-weight: 600;
                         text-decoration: none;
@@ -59,7 +59,7 @@ section {
                         }
                     }
                 }
-        
+
                 p {
                     font-size: 14px;
 
@@ -67,17 +67,17 @@ section {
                         white-space: nowrap;
                     }
                 }
-                
+
                 ul {
                     padding: 0;
                     li {
                         display: inline-block;
                         list-style: none;
-        
+
                         &:nth-of-type(2n) {
                             margin-left: 28px;
                         }
-        
+
                         a {
                             font-size: 12px;
                             text-decoration: none;
@@ -91,6 +91,46 @@ section {
         }
     }
 }
+
+publication-body {
+
+  year {
+    display: grid;
+    padding-bottom: 30px;
+    grid-template-columns: 15% 1fr;
+  }
+
+  label {
+  }
+
+  pubs {
+
+    pub {
+      display: grid;
+      grid-template-columns: 25% 75%;
+
+      .pubimg {
+        width: 150px;
+      }
+
+      .pubtxt {
+
+        .title {
+          font-weight: bolder;
+          font-size: larger;
+        }
+
+        .authors {
+        }
+
+        .source {
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
 
 @include desktop {
     section {
@@ -117,7 +157,7 @@ section {
 
         .section-title {
 
-            h1 { 
+            h1 {
                 position: static;
                 text-align: left;
                 font-size: 15px;

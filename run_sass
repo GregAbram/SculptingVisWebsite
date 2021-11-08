@@ -1,1 +1,5 @@
+if test ! -e css; then
+  mkdir css
+fi
+
 sass sass/style.scss css/style.css

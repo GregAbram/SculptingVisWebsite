@@ -69,6 +69,13 @@ footer {
       grid-template-rows: auto 1fr;
     }
 
+    .footer-support {
+      grid-area: support;
+      display: grid;
+      grid-template-areas: "title" "list";
+      grid-template-rows: auto 1fr;
+    }
+
     .footer-collabs {
       grid-area: collabs;
       display: grid;
@@ -76,10 +83,29 @@ footer {
       grid-template-rows: auto 1fr;
     }
 
+    .footer-logos {
+
+      img {
+        width: 100px;
+      }
+
+      p {
+        text-align: left;
+        font-size: smaller;
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+
+      ul {
+        margin-left: 10px;
+        margin-top: 2px;
+      }
+    }
+
     .footer-thrusts {
       display: grid;
       grid-area: thrusts;
-      grid-template-areas: "title title title title" "ABR ARVR Imm Eval";
+      grid-template-areas: "title title title title title" "ABR ARVR Imm Eval Support";
     }
 
     .footer-thrust {
@@ -138,16 +164,16 @@ footer {
 
 @include desktop {
     footer {
-        grid-template-areas:  "thrusts collabs projects";
-        grid-template-columns: auto auto auto;
+        grid-template-areas:  "thrusts collabs projects support";
+        grid-template-columns: auto auto auto auto;
         row-gap: 20px;
     }
 }
 
 @include laptop {
     footer {
-        grid-template-areas:  "thrusts collabs projects";
-        grid-template-columns: auto auto auto;
+        grid-template-areas:  "thrusts collabs projects support";
+        grid-template-columns: auto auto auto auto;
         row-gap: 20px;
     }
 }
@@ -155,7 +181,7 @@ footer {
 @include tablet {
     footer {
       display: grid;
-      grid-template-areas:  "thrusts collabs projects";
+      grid-template-areas:  "thrusts collabs projects support";
       grid-template-columns: 5fr 3fr 1fr;
       grid-template-columns: 2fr 1fr;
       row-gap: 20px;

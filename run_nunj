@@ -2,6 +2,9 @@ glob = require("glob")
 const nunjucks = require("nunjucks")
 const fs = require("fs")
 
+if (!fs.existsSync('html'))
+  fs.mkdirSync('html', 0744);
+
 var regex = /njk/g
 
 glob("*.njk", function(er, files) {
