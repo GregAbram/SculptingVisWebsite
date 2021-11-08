@@ -1,0 +1,94 @@
+from glob import glob
+
+top = [
+'<!DOCTYPE html>',
+'<html>',
+'  <head>',
+'    <meta charset="utf-8">',
+'    <meta http-equiv="X-UA-Compatible" content="IE=edge">',
+'    <title>Publications | Sculpting Visualizations</title>',
+'    <meta name="description" content="">',
+'    <meta name="viewport" content="width=device-width, initial-scale=1">',
+'    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">',
+'    <link rel="stylesheet" href="../css/style.css">',
+'  </head>',
+'  <body>',
+'    {% include "njk/header.html" %}',
+'    <section>'
+]
+
+bottom = [
+'    </section>',
+'    {% include "njk/footer.html" %}',
+'    <script src="" async defer></script>',
+'  </body>',
+'</html>'
+]
+
+year_section_top = '            <div class="section-title"><h1>%s</h1></div>'
+year_section_bottom   = '            </div>'
+
+def add_pub(year, title):
+  print('              <div class="section-wrapper" id="%s %s"' % (year, title))
+  print('                <div class="subsection">')
+  print('                  <div class="publication-wrapper">')
+  print('                    <div class="publication">')
+  print('                      <img src="../publications/%s/%s/image.png" alt="%s"/>' % (year, title, title))
+  print('                      <div class="desc">')
+  pdf = glob('publications/%s/%s/article.pdf' % (year, title))
+  if len(pdf) == 1:
+    print('                        <h3><a href="../publications/%s/%s/article.pdf" target="_blank">%s</a></h3>' % (year, title, title))
+  else:
+    print('                        <h3>%s</h3>' % title)
+  print('                        <p>')
+  afile = glob('publications/%s/%s/authors' % (year, title))
+  if len(afile) == 1:
+    authors = []
+    f = open(afile[0]);
+    for line in f:
+      authors = authors + line.strip().split(';')
+    f.close()
+    print('                        %s; ' % ','.join(['<span> %s</span>' % a for a in authors]))
+  else:
+    print('                        (no authors)')
+  jfile = glob('publications/%s/%s/venue' % (year, title))
+  if len(jfile) == 1:
+    f = open(jfile[0]);
+    venue = f.readline().strip()
+    f.close()
+    print('                        <i>%s</i>' % venue)
+  else:
+    print('                        <i>(no venue)</i>')
+  cite = glob('publications/%s/%s/citation.tex' % (year, title))
+  if len(cite) == 1:
+    print('                        <a href="../publications/%s/%s/citation.tex" target="_blank">  Cite  </a>' % (year, title))
+  else:
+    print('                        <h3>  No Cite </h3>')
+  dfile = glob('publications/%s/%s/doi' % (year, title))
+  if len(dfile) == 1:
+    f = open(dfile[0]);
+    doi = f.readline().strip()
+    f.close()
+    print('                        DOI %s' % doi)
+  else:
+    print('                        <h3>No DOI</h3>')
+  print('                        </p>')
+  print('                      </div>')
+  print('                    </div>')
+  print('                  </div>')
+  print('                </div>')
+  print('              </div>')
+  print('            </div>')
+
+print("\n".join(top))
+
+for year in sorted([i.split('/')[-1] for i in glob('publications/*')])[-1:]:
+  print(year_section_top % year)
+  titles = sorted([i.split('/')[-1] for i in glob('publications/%s/*' % year)])
+  if len(titles) > 0:
+    for title in titles[:1]:
+      add_pub(year, title)
+
+  print(year_section_bottom)
+
+print("\n".join(bottom))
