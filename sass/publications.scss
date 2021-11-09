@@ -92,11 +92,13 @@ section {
     }
 }
 
-publication-body {
+.publication-body {
+  padding-left: 10%;
+  padding-right: 10%;
 
   year {
     display: grid;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     grid-template-columns: 15% 1fr;
   }
 
@@ -107,7 +109,8 @@ publication-body {
 
     pub {
       display: grid;
-      grid-template-columns: 25% 75%;
+      grid-template-columns: 175px 1fr;
+      padding-bottom: 20px;
 
       .pubimg {
         width: 150px;

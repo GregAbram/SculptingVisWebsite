@@ -20,11 +20,11 @@ top = [
 '  </head>',
 '  <body>',
 '    {% include "njk/header.html" %}',
-'    <publication-body>'
+'    <div class=publication-body>'
 ]
 
 bottom = [
-'    </publication-body>',
+'    </div>',
 '    {% include "njk/footer.html" %}',
 '    <script src="" async defer></script>',
 '  </body>',
@@ -32,12 +32,12 @@ bottom = [
 ]
 
 def add_pub(year, title):
-  print('        <pub id="%s %s">' % (year, title))
-  print('          <div class=pubimg>')
-  print('            <img  class=pubimg src="../publications/%s/%s/image.png" alt="%s"/>' % (year, title, title))
-  print('          </div>')
-  print('          <div class="pubtxt">')
-  print('            <p>')
+  txt = '        <pub id="%s %s">\n' % (year, title)
+  txt = txt + '          <div class=pubimg>\n'
+  txt = txt + '            <img  class=pubimg src="../publications/%s/%s/image.png" alt="%s"/>\n' % (year, title, title)
+  txt = txt + '          </div>\n'
+  txt = txt + '          <div class="pubtxt">\n'
+  txt = txt + '            <p>\n'
 
   cfile = 'publications/%s/%s/pub.bib' % (year, title)
   if os.path.isfile(cfile):
@@ -46,47 +46,48 @@ def add_pub(year, title):
       citation = load(cf).entries[0]
 
     if 'author' in citation:
-      print('<span class=authors>%s</span>' % citation['author'])
+      txt = txt + '<span class=authors>%s</span>' % citation['author']
     else:
-      print('(no authors)')
+      txt = txt + '(no authors)\n'
 
     if 'year' in citation:
-      print('(%s).' % citation['year'])
+      txt = txt + '(%s).' % citation['year']
     else:
-      print('.')
+      txt = txt + '.\n'
 
     if 'title' in citation:
       title = citation['title']
 
-    print('<span class=title>')
+    txt = txt + '<span class=title>\n'
     if 'url' in citation:
-      print('<a href="%s" target="_blank">%s</a>' % (citation['url'], title))
+      txt = txt + '<a href="%s" target="_blank">%s</a>\n' % (citation['url'], title)
     else:
-      print('%s' % title)
-    print('</span>')
+      txt = txt + '%s\n' % title
+    txt = txt + '</span>\n'
 
-    print('<span class=source>')
+    txt = txt + '<span class=source>\n'
 
     if 'journal' in citation:
-      print(',%s' % citation['journal'])
+      txt = txt + ',%s\n' % citation['journal']
 
     if 'volume' in citation:
-      print(', vol. %s' % (citation['volume']))
+      txt = txt + ', vol. %s\n' % (citation['volume'])
 
     if 'number' in citation:
-      print(', no. %s' % (citation['number']))
+      txt = txt + ', no. %s\n' % (citation['number'])
 
     if 'pages' in citation:
-      print(', (%s)' % (citation['pages']))
+      txt = txt + ', (%s)\n' % (citation['pages'])
 
-    print('</span>')
+    txt = txt + '</span>\n'
 
   else:
-    print('<span class=pub_title>%s</span>. No citation.' % title)
+    txt = txt + '<span class=pub_title>%s</span>. No citation.\n' % title
 
-  print('            </p>')
-  print('          </div>')
-  print('        </pub>')
+  txt = txt + '            </p>\n'
+  txt = txt + '          </div>\n'
+  txt = txt + '        </pub>\n'
+  return txt
 
 print("\n".join(top))
 
@@ -101,8 +102,12 @@ for year in sorted([i.split('/')[-1] for i in glob('publications/*')]):
   titles = sorted([i.split('/')[-1] for i in glob('publications/%s/*' % year)])
   if len(titles) > 0:
     for title in titles:
-      eprint('TITLE %s' % title)
-      add_pub(year, title)
+      eprint(title)
+      h = 'publications/%s/%s/pub.html' % (year, title)
+      f = open(h, 'w')
+      f.write(add_pub(year, title))
+      f.close()
+      print('{% include "../' + h + '" %}')
 
   print('              </pubs>')
   print('            </year>')
