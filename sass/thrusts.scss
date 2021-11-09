@@ -143,10 +143,5 @@ thrust-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: $dual-image-gap;
-
-      img {
-          object-fit: cover;
-          width: 50%;
-      }
   }
 }
