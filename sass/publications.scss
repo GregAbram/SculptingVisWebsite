@@ -92,7 +92,7 @@ section {
     }
 }
 
-.publication-body {
+.publication-page-body {
   padding-left: 10%;
   padding-right: 10%;
 
@@ -118,6 +118,7 @@ section {
 
       .pubtxt {
 
+
         .title {
           font-weight: bolder;
           font-size: larger;
@@ -132,6 +133,38 @@ section {
       }
     }
   }
+}
+
+.project-publications {
+
+
+  pub {
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    padding-bottom: 20px;
+
+    .pubimg {
+      width: 150px;
+    }
+
+
+
+    .pubtxt {
+
+      .title {
+        font-weight: bolder;
+        font-size: larger;
+      }
+
+      .authors {
+      }
+
+      .source {
+        font-style: italic;
+      }
+    }
+  }
+
 }
 
 

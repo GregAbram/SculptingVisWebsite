@@ -20,7 +20,7 @@ top = [
 '  </head>',
 '  <body>',
 '    {% include "njk/header.html" %}',
-'    <div class=publication-body>'
+'    <div class=publication-page-body>'
 ]
 
 bottom = [
@@ -46,7 +46,7 @@ def add_pub(year, title):
       citation = load(cf).entries[0]
 
     if 'author' in citation:
-      txt = txt + '<span class=authors>%s</span>' % citation['author']
+      txt = txt + '<span class=authors>%s </span>' % citation['author']
     else:
       txt = txt + '(no authors)\n'
 
@@ -63,21 +63,21 @@ def add_pub(year, title):
       txt = txt + '<a href="%s" target="_blank">%s</a>\n' % (citation['url'], title)
     else:
       txt = txt + '%s\n' % title
-    txt = txt + '</span>\n'
+    txt = txt + '</span>'
 
     txt = txt + '<span class=source>\n'
 
     if 'journal' in citation:
-      txt = txt + ',%s\n' % citation['journal']
+      txt = txt + '%s\n' % citation['journal']
 
     if 'volume' in citation:
-      txt = txt + ', vol. %s\n' % (citation['volume'])
+      txt = txt + 'vol. %s\n' % (citation['volume'])
 
     if 'number' in citation:
-      txt = txt + ', no. %s\n' % (citation['number'])
+      txt = txt + 'no. %s\n' % (citation['number'])
 
     if 'pages' in citation:
-      txt = txt + ', (%s)\n' % (citation['pages'])
+      txt = txt + '(%s)\n' % (citation['pages'])
 
     txt = txt + '</span>\n'
 
@@ -91,7 +91,7 @@ def add_pub(year, title):
 
 print("\n".join(top))
 
-for year in sorted([i.split('/')[-1] for i in glob('publications/*')]):
+for year in sorted([i.split('/')[-1] for i in glob('publications/*')], reverse=True):
 
   eprint('YEAR %s' % year)
 
