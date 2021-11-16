@@ -3,14 +3,38 @@
 
 http://sculptingvis.tacc.utexas.edu:8080/html/index.html
 
+## First time set up
 
-## Developer Dependencies
+### 1. Install developer dependencies
 
-[Sass](https://sass-lang.com/) and [Node.js](https://nodejs.org/en/download) are developer dependencies. Click [here](https://sass-lang.com/install) to install Sass and [here](https://nodejs.org/en/download) to install Node.js.
+Make sure you have installed [Sass](https://sass-lang.com/) and [Node.js](https://nodejs.org/en/download). 
+- Click [here](https://sass-lang.com/install) to install Sass 
+- And [here](https://nodejs.org/en/download) to install Node.js.
 
-Sass is a preprocessor for css, and Node.js uses [nunjucks](https://mozilla.github.io/nunjucks/) to preprocess .njk files to .html. In this project, sass and nunjuck sourcefiles (extensions scss and njk) are in the sass and njk directories respectively.  
+Sass is a preprocessor for CSS, and Node.js uses [nunjucks](https://mozilla.github.io/nunjucks/) to preprocess `.njk` files to `.html`. In this project, sass and nunjuck sourcefiles (extensions `.scss` and `.njk`) are in the sass and njk directories respectively.
 
-## Updating the website (on the server)
+### 2. Download or clone this Github repo
+
+To download, click on the **Code** green button on top of this website, then click **Download ZIP**
+
+To clone, run this command in your Terminal:
+
+```
+git clone https://github.com/GregAbram/SculptingVisWebsite.git
+```
+
+### 3. Setup the website
+
+- If you are using MacOS or Linux: 
+	- In your Terminal program, run `./setup.sh` 
+- If you are using Windows: 
+	- In your Powershell or Command Prompt, run `./setup.bat`
+
+### 4. Open the website
+
+Open `html/index.html` in your web browser to see the website locally 
+
+## Updating the website
 
 `setup.sh` (MacOS/Linux) or `setup.bat` (Windows) will apply Sass and nunjucks preprocessing and places the results in the html and css directories.  
 

@@ -24,4 +24,4 @@ IF NOT EXIST css\ (
 :: Run Sass
 cmd /C sass sass/style.scss css/style.css
 
-ECHO setup.bat has finished running. You now have 2 folders html/ and css/ filled with the website's content
+ECHO setup.bat has finished running. You now have 2 folders html/ and css/ filled with the website's latest content
