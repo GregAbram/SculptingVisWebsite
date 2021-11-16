@@ -30,6 +30,8 @@ git clone https://github.com/GregAbram/SculptingVisWebsite.git
 - If you are using Windows: 
 	- In your Powershell or Command Prompt, run `./setup.bat`
 
+This will create 2 new folders **html** and **css** filled with the website's content
+
 ### 4. Open the website
 
 Open `html/index.html` in your web browser to see the website locally 
