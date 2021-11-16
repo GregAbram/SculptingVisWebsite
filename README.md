@@ -7,9 +7,16 @@ http://sculptingvis.tacc.utexas.edu:8080/html/index.html
 
 ### 1. Install developer dependencies
 
-Make sure you have installed [Sass](https://sass-lang.com/) and [Node.js](https://nodejs.org/en/download). 
-- Click [here](https://sass-lang.com/install) to install Sass 
-- And [here](https://nodejs.org/en/download) to install Node.js.
+Make sure you have installed: 
+- [Python](https://www.python.org/downloads)
+- [Sass](https://sass-lang.com/install)
+- [Node.js](https://nodejs.org/en/download)
+
+Then, install **bibtexparser** for Python:
+
+```
+python3 -m pip install bibtexparser
+```
 
 Sass is a preprocessor for CSS, and Node.js uses [nunjucks](https://mozilla.github.io/nunjucks/) to preprocess `.njk` files to `.html`. In this project, sass and nunjuck sourcefiles (extensions `.scss` and `.njk`) are in the sass and njk directories respectively.
 
