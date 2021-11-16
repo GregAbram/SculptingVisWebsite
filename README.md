@@ -1,12 +1,58 @@
 
-# SculptingVis
+# Sculpting Vis Website
 
-## Developer Dependencies
-[Sass](https://sass-lang.com/) and [Node.js](https://nodejs.org/en/download) are developer dependencies. Click [here](https://sass-lang.com/install) to install Sass and [here](https://nodejs.org/en/download) to install Node.js.
+http://sculptingvis.tacc.utexas.edu:8080/html/index.html
 
-Sass is a preprocessor for css, and Node.js uses [nunjucks](https://mozilla.github.io/nunjucks/) to preprocess .njk files to html.   In this project, sass and nunjuck sourcefiles (extensions scss and njk) are in the scss and njk directories respectively.  A Makefile in the root directory applies these preprocessing steps and places the resolts in the html and css directories.  *When you add/change files in the scss and njk directories, you will need to run* ***make*** *in the root directory*.
+## First time set up
 
-After you make changes to sass and nunjucks source files, run make and commit.  This will keep the css and html directories up to date so a clean checkout can be immediately used.
+### 1. Install developer dependencies
+
+Make sure you have installed: 
+- [Python](https://www.python.org/downloads)
+- [Sass](https://sass-lang.com/install)
+- [Node.js](https://nodejs.org/en/download)
+
+Then, install **bibtexparser** for Python:
+
+```
+python3 -m pip install bibtexparser
+```
+
+Sass is a preprocessor for CSS, and Node.js uses [nunjucks](https://mozilla.github.io/nunjucks/) to preprocess `.njk` files to `.html`. In this project, sass and nunjuck sourcefiles (extensions `.scss` and `.njk`) are in the sass and njk directories respectively.
+
+### 2. Download or clone this Github repo
+
+To download, click on the **Code** green button on top of this website, then click **Download ZIP**
+
+To clone, run this command in your Terminal:
+
+```
+git clone https://github.com/GregAbram/SculptingVisWebsite.git
+```
+
+### 3. Setup the website
+
+- If you are using MacOS or Linux: 
+	- In your Terminal program, run `./setup.sh` 
+- If you are using Windows: 
+	- In your Powershell or Command Prompt, run `./setup.bat`
+
+This will create 2 new folders **html** and **css** filled with the website's content
+
+### 4. Open the website
+
+Open `html/index.html` in your web browser to see the website locally 
+
+## Updating the website
+
+`setup.sh` (MacOS/Linux) or `setup.bat` (Windows) will apply Sass and nunjucks preprocessing and places the results in the html and css directories.  
+
+When you add/change files in the **sass** and **njk** directories, you will need to run:
+
+- `./setup.sh` if you are using MacOS or Linux
+- Or `./setup.bat` if you are using Windows
+
+This will keep the css and html directories up to date so a clean checkout can be immediately used.
 
 ## Updating Navigation
 
