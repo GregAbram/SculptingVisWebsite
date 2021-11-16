@@ -1,12 +1,25 @@
 
-# SculptingVis
+# Sculpting Vis Website
+
+http://sculptingvis.tacc.utexas.edu:8080/html/index.html
+
 
 ## Developer Dependencies
+
 [Sass](https://sass-lang.com/) and [Node.js](https://nodejs.org/en/download) are developer dependencies. Click [here](https://sass-lang.com/install) to install Sass and [here](https://nodejs.org/en/download) to install Node.js.
 
-Sass is a preprocessor for css, and Node.js uses [nunjucks](https://mozilla.github.io/nunjucks/) to preprocess .njk files to html.   In this project, sass and nunjuck sourcefiles (extensions scss and njk) are in the scss and njk directories respectively.  A Makefile in the root directory applies these preprocessing steps and places the resolts in the html and css directories.  *When you add/change files in the scss and njk directories, you will need to run* ***make*** *in the root directory*.
+Sass is a preprocessor for css, and Node.js uses [nunjucks](https://mozilla.github.io/nunjucks/) to preprocess .njk files to .html. In this project, sass and nunjuck sourcefiles (extensions scss and njk) are in the sass and njk directories respectively.  
 
-After you make changes to sass and nunjucks source files, run make and commit.  This will keep the css and html directories up to date so a clean checkout can be immediately used.
+## Updating the website (on the server)
+
+`setup.sh` (MacOS/Linux) or `setup.bat` (Windows) will apply Sass and nunjucks preprocessing and places the results in the html and css directories.  
+
+When you add/change files in the **sass** and **njk** directories, you will need to run:
+
+- `./setup.sh` if you are using MacOS or Linux
+- Or `./setup.bat` if you are using Windows
+
+This will keep the css and html directories up to date so a clean checkout can be immediately used.
 
 ## Updating Navigation
 
