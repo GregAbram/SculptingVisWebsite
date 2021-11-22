@@ -46,8 +46,8 @@
                 visualization through hand-crafted or naturally occurring objects. ABR bridges key barriers to incorporating artists
                 and designers into visualization teams by enabling them to contribute their visual expertise without spending months
                 learning software tools that currently limit the creative possibilities for their work.</p>
-              <iframe src="https://player.vimeo.com/video/489111243?h=2d3c230032" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> 
-              <p><a href="https://vimeo.com/489111243">Sculpting Visualizations - AGU 2020</a> from <a href="https://vimeo.com/user7604918">Francesca Samsel</a> on <a href="https://vimeo.com">Vimeo</a>.</p> 
+              <iframe src="https://player.vimeo.com/video/489111243?h=2d3c230032" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+              <p><a href="https://vimeo.com/489111243">Sculpting Visualizations - AGU 2020</a> from <a href="https://vimeo.com/user7604918">Francesca Samsel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
             </div>
             <div id="interface">
               <h2>ABR Interface</h2>
@@ -58,18 +58,16 @@
                 graphics processes with the practices of the artistic community. ABR layers glyphs, lines, and surfaces with color and
                 shape the way a printmaker might approach image-making in their studio. </p>
 
-              <p class="big-paragraph"> The design interface has two primary workable components:<br>
+              <p class="big-paragraph"> The user interface has five primary workable components:<br>
                 — <b>Key Data:</b> geometric representations of your data (points, lines, surfaces), loaded from VTK unstructured grid files, each piece of
                 key data has associated scalar & vector variables<br>
                 — <b>Data Impressions:</b> your “layers” of data in the visualization. Apply variables and visual elements to each data impression, and
-                watch as they are composed in real time in your visualization.</p>
-
-              <p class="big-paragraph"> The user interface itself has three primary elements:<br>
+                watch as they are composed in real time in your visualization.
                 — <b>Data Palette:</b> the panel on the left-hand side which displays data impressions and loaded variables for your data.<br>
                 — <b>Composition Panel:</b> the central window into which data impressions are dragged. Each set of data impressions + colormaps, glyphs,
                 streamlines, etc. is called a “plate,” sticking with the printmaking metaphors. Use this panel like you would in Photoshop, adding
                 visual elements as you see fit. More information on this can be found further along in this instructional guide.<br>
-                — <b>Design Palette:</b> the panel on the right-hand side which displays all design options for the elements that comprise your visualization.
+                — <b>Design Palette:</b> the panel on the right-hand side which displays all design options for the elements that comprise your visualization.</p>
               </p>
               <div class="first-image">
                   <img src="../images/thrusts/VisSoftwareArch/legend1.png">
@@ -87,13 +85,19 @@
                 shortens the distance between data and the natural phenomena they represent and opens new possibilities for visually
                 distinguishing and communicating intra-variate dynamics in complex visualizations.</p>
 
-                <iframe src="https://player.vimeo.com/video/553404481" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                
-                <p>
-                — Hand-drawn and painted lines and line-components used to generate data-mapped streamlines in ABR.<br>
-                — A wide variety of both shape and texture in hand-made objects, which are then imported into ABR and mapped to data.<br>
-                — By drawing color from nature / natural imagery, using ColorLoom, we can more effectively connect environmental data with the
-                physical phenomena it represents, creating Affective visualizations that are intuitive and easy to parse.<br>
+                <div class="first-image">
+                    <img src="../images/thrusts/VisSoftwareArch/ExpVoc2.png">
+                </div>
+                <h5>Hand-drawn and painted lines and line-components in the center of this image are applied to visualized Antarctic data, generated as data-mapped streamlines in ABR. The final visualizations can be seen on the far left and right of the image above. </h5>
+                <div class="first-image">
+                    <img src="../images/thrusts/VisSoftwareArch/ExpVoc3.png">
+                </div>
+                <h5>Here, hand-sculpted glyphs create a wide variety of both shape and texture (center), which can be imported as data-mapped objects into ABR and used in complex, multivariate visualizations, such as those shown in the left and right images above. </h5>
+                <div class="first-image">
+                    <img src="../images/thrusts/VisSoftwareArch/ExpVoc4.png">
+                </div>
+                <h5>By drawing color from natural imagery using ColorLoom, we can more effectively connect environmental data with the
+                physical phenomena it represents, creating Affective visualizations that are intuitive and easy to parse. Here, the leftmost image shows an iPhone photo taken of the New Mexico landscape. The central image shows a palette of colors taken directly from the New Mexico landscape image. The rightmost image shows a visualization of Southern Ocean data using these colors.</h5>
                 </p>
 
                 <div id="libraries">
@@ -103,64 +107,54 @@
                   </div>
                   <p class="big-paragraph">The ABR library catalogues glyphs, lines, colormaps, and textures created by Francesca Samsel, professional artist and co-PI of the Sculpting Vis Collaborative. Each of these assets is usable in the Artifact-Based Rendering program. Click here to access the online library of vis assets. </p>
                 </div>
-                
+
                 <div id="applets">
                   <h2>Applets</h2>
                   <div class="first-image">
                       <img src="../images/thrusts/VisSoftwareArch/ABR-applets.png">
                   </div>
 
-                  <p class="big-paragraph">
-                      Generating dynamic vis assets for use in our ABR program may be a barrier for artists unfamiliar with programming architectures.
-                      We created a series of Applets—ColorLoom, Infinite Line, Glyph Aligner, and Texture Mapper—to facilitate asset creation and easy import in ABR.
-                  </p>
+                </div>
+                <h2>Infinite Line</h2>
 
-                  <iframe src="https://drive.google.com/file/d/1gHyFFW2WOPSE1dgtjYaA-HO6xOshJsgt/preview" width="640" height="360" allow="autoplay"></iframe>
+                <div class="first-image">
+                  <img src="../images/thrusts/VisSoftwareArch/lines (1).png">
+                  <h5>Hand-drawn and painted lines and line-components used to generate data-mapped streamlines in ABR.</h5>
+                </div>
+                <p>
+                  <p class="big-paragraph"><b>Infinite Line</b> brings the physical artistic process into the visualization generation pipeline by allowing a user to sketch a line segment,
+                  upload an image of the sketch, and turn that sketch into a continuous, unbroken, patterned streamline. The output file can be dragged directly into ABR for immediate use.
+                </p>
+                <h2>Glyph Aligner</h2>
 
-                  {# Infinite Line #}
-                  <p>
-                    <p class="big-paragraph"><b>Infinite Line</b> brings the physical artistic process into the visualization generation pipeline by allowing a user to sketch a line segment,
-                    upload an image of the sketch, and turn that sketch into a continuous, unbroken, patterned streamline. The output file can be dragged directly into ABR for immediate use.
-                  </p>
-                  <div class="first-image">
-                    <img src="../images/thrusts/VisSoftwareArch/lines (1).png">
-                    <h5>Hand-drawn and painted lines and line-components used to generate data-mapped streamlines in ABR.</h5>
-                  </div>
-
-                  {# Glyph Aligner #}
+                <div class="first-image">
+                  <img src="../images/thrusts/VisSoftwareArch/glyphs (1).png">
+                  <h5>A wide variety of both shape and texture in hand-made objects, which are then imported into ABR and mapped to data</h5>
                   <p>
                     <p class="big-paragraph"><b>Glyph Aligner</b> like Infinite Line, connects the physical artistic process with the digital.
                     When an artist creates a three-dimensional object, such as a small clay sculpture, they can 3D scan this object and drag it into Glyph Aligner.
                     Glyph Aligner allows users to give this 3D scan a directional quality. The output file can be dragged directly into ABR for immediate use as a glyph.
                   </p>
-                  <div class="first-image">
-                    <img src="../images/thrusts/VisSoftwareArch/glyphs (1).png">
-                    <h5>A wide variety of both shape and texture in hand-made objects, which are then imported into ABR and mapped to data</h5>
-                  </div>
-
-                  {# ColorLoom #}
-                  <p>
-                    <p class="big-paragraph"><b>ColorLoom</b> allows a user to generate custom colormaps with hues automatically pulled from imported images. This applet gives users looking to design a custom colormap a
-                    dynamic starting point, and allows them to pull hues from imagery directly related to the dataset they are visualizing.
-                  </p>
-                  <div class="first-image">
-                    <img src="../images/thrusts/VisSoftwareArch/color.png">
-                    <h5>By drawing color from nature / natural imagery, using ColorLoom, we can more effectively connect environmental data with the physical phenomena it represents, creating Affective visualizations that are intuitive and easy to parse.</h5>
-                  </div>
-                  <p>
-
-                  <iframe src="https://player.vimeo.com/video/637137561" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                  <p><a href="https://vimeo.com/637137561">NaturalColor_3m.mp4</a> from <a href="https://vimeo.com/user7604918">Francesca Samsel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-                  
-                  {# Texture Mapper #}
-                  <p class="big-paragraph"><b>Texture Mapper</b> shortens the space between the texture of the physical and digital worlds.
-                      A user may simply take a photo of any surface and upload that photo to texture mapper.
-                      The program automatically extracts the texture of the photo and produces a file output that can be dragged directly into ABR for immediate use as a texture for data surfaces in a visualization.
-                  </p>
-                  <div class="first-image">
-                    <img src="../images/thrusts/VisSoftwareArch/texture (1).png">
-                  </div>
                 </div>
+                <h2>ColorLoom</h2>
+
+                <div class="first-image">
+                  <img src="../images/thrusts/VisSoftwareArch/color.png">
+                  <h5>By drawing color from nature / natural imagery, using ColorLoom, we can more effectively connect environmental data with the physical phenomena it represents, creating Affective visualizations that are intuitive and easy to parse.</h5>
+                </div>
+                <p>
+                  <p class="big-paragraph"><b>ColorLoom</b> allows a user to generate custom colormaps with hues automatically pulled from imported images. This applet gives users looking to design a custom colormap a
+                  dynamic starting point, and allows them to pull hues from imagery directly related to the dataset they are visualizing.
+                </p>
+                <h2>Texture Mapper</h2>
+                <div class="first-image">
+                  <img src="../images/thrusts/VisSoftwareArch/texture (1).png">
+                </div>
+                <p>
+                <p class="big-paragraph"><b>Texture Mapper</b> shortens the space between the texture of the physical and digital worlds.
+                    A user may simply take a photo of any surface and upload that photo to texture mapper.
+                    The program automatically extracts the texture of the photo and produces a file output that can be dragged directly into ABR for immediate use as a texture for data surfaces in a visualization.
+                </p>
             </div>
 
             <div id="resources">
