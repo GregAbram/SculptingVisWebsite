@@ -32,22 +32,41 @@
       <thrust-content>
         <div  id="overview">
           <h2>Artifact-Based Rendering App</h2>
-          <p class="big-paragraph">Sculpting Visualization is a research project that brings <a href="#">art and design theory</a> and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-          <div class="dual-images">
-              <div class="first-image">
-                  <img src="../images/sample.jpg">
-                  <h5>Other cool things.</h5>
-              </div>
-              <div class="second-image">
-                  <img src="../images/sample.jpg">
-                  <h5>Hey this is information that is cool and important.</h5>
-              </div>
-          </div>
-        </div>
+          <p class="big-paragraph">Artifact-Based Rendering (ABR) is a framework that includes tools and processes to enable digital visualizations to incorporate physical media. Created with artists and designers in mind, ABR is a technical foundation and the input channel for Sculpting Visualization’s project to enrich the visual vocabulary of scientific visualization through hand-crafted or naturally occurring objects. ABR bridges key barriers to incorporating artists and designers into visualization teams by enabling them to contribute their visual expertise without spending months learning software tools that currently limit the creative possibilities for their work.
+
+            <br>The pipeline for creating a visualization using the ABR application system is divided into three stages: (1) physical design work to craft artifacts; (2) digitizing and translating artifacts for data-driven visualization; (3) creating data-to-visual mappings to implement multivariate interactive visualizations.
+
+            <br>Artifacts are created and curated using four applets: Infinite Line, Glyph Aligner, ColorLoom, and Texture Mapper, in combination with material brought in by the user from the “real world,” such as photographs, sculptures, and sketches.
+
+            <br>Stage 2, digitizing and translating artifacts, begins with capturing the material appearance and/or form of the physical artifacts produced in Stage 1 as digitized artifacts. The capture technique depends on the type of artifact, as well as its intended use. Next, digitized artifacts are translated into vis assets such as colormaps, textures, and glyph meshes that are correctly oriented, down-sampled if necessary, and have normal maps applied for agile rendering.
+
+            <br>Capture methods include photography, scanning, photogrammetry, or digital tools with physical inputs (drawing boards, for example). An open online digital library and underlying database system stores the raw digitized artifacts and associated vis assets.
+
+            <br>Stage 3 of ABR involves implementing data-driven interactive visualizations using the vis assets. To provide structure to these multivariate
+            visualizations, we say that each visualization is composed of multiple
+            vis layers. These are analogous to the 2D layers used by artists in
+            image editing programs, but vis layers are not 2D; they are true 3D
+            volumetric constructs. Each vis layer has hooks for connecting vis
+            assets to data objects. Thus, after creating a new oriented glyph layer,
+            a designer could attach vis assets to define the 3D glyph mesh and
+            color map to use for the vis layer and also attach data objects (e.g.,
+            density sampled phytoplankton concentration, velocity magnitude) to
+            drive color changes. The layers are combined into a final interactive
+            visualization, which may be rendered fast enough to optionally display
+            in head-tracked, stereoscopic VR.
+
+            <br> For more information on the ABR application system, see Publications below.</p>
+
+
         <div  id="links">
           <h2>Links</h2>
-          <p>Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
-          <p>Sculpting Visualization is a research project that brings art and design theory and practice to visualization. Drawing on the expertise of a multidisciplinary team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology. Sculpting Visualization describes an ethos, a set of technical tools and interfaces, and resources to advance data visualization via 3D, augmented reality, virtual reality, and data physicalization technology.</p>
+          <p class="big-paragraph">ABR is Open Source software; the latest releases of the following packages can be found on GitHub:
+            — <a href=”https://github.com/ivlab/SculptingVisApp”>SculptingVisApp</a>:primary app to design and build visualizations with ABR
+            — <a href=”https://github.com/ivlab/SculptingVisApp”>ABREngine Unity Package</a>
+            — <a href=”https://github.com/ivlab/SculptingVisApp”>ABR Python Server</a>
+            — <a href=”https://github.com/ivlab/SculptingVisApp”>ABR Artist-Driven Visualization Schema</a>
+</p>
+
           <div class="single-image">
               <div class="first-image">
                   <img src="../images/hero.jpg">
@@ -57,14 +76,8 @@
         </div>
         <div id="tutorials">
           <h2>Tutorials and Instructions</h2>
-          <p>Sculpting Visualization is a <a href="#">research project</a> that brings art and
-            design theory and practice to visualization. Drawing on the expertise of a multidisciplinary
-            team, Sculpting Visualization describes an ethos, a set of technical tools and interfaces,
-            and resources to advance data visualization via 3D, augmented reality, virtual reality, and
-            data physicalization technology. Sculpting Visualization describes an ethos, a set of
-             technical tools and interfaces, and resources to advance data visualization via 3D,
-             augmented reality, virtual reality, and data physicalization technology.</p>
-          
+          <p>Artifact-Based Rendering tutorials and instructions coming soon!</p>
+
         </div>
         <div class=project-publications id=pubs>
           <h2>Publications</h2>
