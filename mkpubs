@@ -1,7 +1,7 @@
 from __future__ import print_function
 import os, sys
 from glob import glob
-from bibtexparser import load
+from bibtexparser import loads
 
 # Print to stderr
 def eprint(*args, **kwargs):
@@ -18,6 +18,21 @@ top = [
 '    <meta name="viewport" content="width=device-width, initial-scale=1">',
 '    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">',
 '    <link rel="stylesheet" href="../css/style.css">',
+'    <!--',
+'    <script>',
+'      var current_cite = "";'
+'      function popup(id) {',
+'        if (current_cite != "") popdown(current_cite);'
+'        e = document.getElementById(id);',
+'        if (e) { e.style.visibility = "visible"; current_cite = id; }',
+'      }',
+'      function popdown(id) {',
+'        e = document.getElementById(id);',
+'        if (e) { e.style.visibility = "hidden"; current_cite = ""; }',
+'      }'
+'      </script>',
+'   -->',
+'   <script src="../js/code.js"></script>',
 '  </head>',
 '  <body>',
 '    {% include "njk/header.html" %}',
@@ -32,8 +47,9 @@ bottom = [
 '</html>'
 ]
 
-def add_pub(year, title):
-  txt = '        <pub id="%s %s">\n' % (year, title)
+def add_pub(year, title, indx):
+  tag = "%s-%d" % (year, indx)
+  txt =       '        <pub id="%s %s">\n' % (year, title)
   txt = txt + '          <div class=pubimg>\n'
   txt = txt + '            <img  class=pubimg src="../publications/%s/%s/image.png" alt="%s"/>\n' % (year, title, title)
   txt = txt + '          </div>\n'
@@ -43,18 +59,20 @@ def add_pub(year, title):
   cfile = 'publications/%s/%s/pub.bib' % (year, title)
   if os.path.isfile(cfile):
 
+    citelines = []
     with open(cfile, 'r', encoding='utf-8') as cf:
-      citation = load(cf).entries[0]
+      for line in cf:
+        citelines.append(line)
 
-    if 'author' in citation:
-      txt = txt + '<span class=authors>%s </span>' % citation['author']
-    else:
-      txt = txt + '(no authors)\n'
+    txt = txt + '<div class="cite_popup" id="%s">' % tag
+    txt = txt + '<ul style="">'
+    for line in citelines:
+      txt = txt + '<li>&nbsp;&nbsp;' + line + '</li>'
+    txt = txt + '</ul>'
+    txt = txt + '<button onclick=popdown_bibtex("%s")>X</button>' % tag
+    txt = txt + '</div>'
 
-    if 'year' in citation:
-      txt = txt + '(%s).' % citation['year']
-    else:
-      txt = txt + '.\n'
+    citation = loads("".join(citelines)).entries[0]
 
     if 'title' in citation:
       title = citation['title']
@@ -66,7 +84,17 @@ def add_pub(year, title):
       txt = txt + '%s\n' % title
     txt = txt + '</span>'
 
+    if 'author' in citation:
+      txt = txt + '<br><span class=authors>%s </span>' % citation['author']
+    else:
+      txt = txt + '<br>(no authors)\n'
+
     txt = txt + '<span class=source>\n'
+
+    if 'year' in citation:
+      txt = txt + '(%s).' % citation['year']
+    else:
+      txt = txt + '.\n'
 
     if 'journal' in citation:
       txt = txt + '%s\n' % citation['journal']
@@ -82,8 +110,10 @@ def add_pub(year, title):
 
     txt = txt + '</span>\n'
 
+    txt = txt + '<p onclick=popup_bibtex("%s")>(cite)</p>' % tag
+
   else:
-    txt = txt + '<span class=pub_title>%s</span>. No citation.\n' % title
+    txt = txt + '<span class=pub-title>%s</span>. No citation.\n' % title
 
   txt = txt + '            </p>\n'
   txt = txt + '          </div>\n'
@@ -98,16 +128,16 @@ def main():
     eprint('YEAR %s' % year)
 
     print('            <year>')
-    print('              <label><h1>%s</h1></label>' % year)
+    print('              <label><h2>%s</h2></label>' % year)
     print('              <pubs>')
 
     titles = sorted(os.listdir(f'publications/{year}'))
     if len(titles) > 0:
-      for title in titles:
+      for indx,title in enumerate(titles):
         eprint(title)
         h = 'publications/%s/%s/pub.html' % (year, title)
         f = open(h, 'w', encoding='utf-8')
-        f.write(add_pub(year, title))
+        f.write(add_pub(year, title, indx))
         f.close()
         print('{% include "../' + h + '" %}')
 

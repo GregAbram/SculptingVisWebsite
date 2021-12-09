@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
         <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/code.js"></script>
     </head>
     <body>
 
@@ -49,7 +50,8 @@
               <iframe src="https://player.vimeo.com/video/489111243?h=2d3c230032" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
               <p><a href="https://vimeo.com/489111243">Sculpting Visualizations - AGU 2020</a> from <a href="https://vimeo.com/user7604918">Francesca Samsel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
             </div>
-            <div id="interface">
+
+            <div class="subsection" id="interface">
               <h2>ABR Interface</h2>
               <div class="first-image">
                   <img src="../images/thrusts/VisSoftwareArch/ABR-Interface_2.png">
@@ -59,22 +61,23 @@
                 shape the way a printmaker might approach image-making in their studio. </p>
 
               <p class="big-paragraph"> The user interface has five primary workable components:<br>
-                — <b>Key Data:</b> geometric representations of your data (points, lines, surfaces), loaded from VTK unstructured grid files, each piece of
-                key data has associated scalar & vector variables<br>
-                — <b>Data Impressions:</b> your “layers” of data in the visualization. Apply variables and visual elements to each data impression, and
-                watch as they are composed in real time in your visualization.
-                — <b>Data Palette:</b> the panel on the left-hand side which displays data impressions and loaded variables for your data.<br>
-                — <b>Composition Panel:</b> the central window into which data impressions are dragged. Each set of data impressions + colormaps, glyphs,
+                <ul>
+                  <li><b><font size="+1">Key Data:</font></b> geometric representations of your data (points, lines, surfaces), loaded from VTK unstructured grid files, each piece of
+                key data has associated scalar & vector variables</li>
+                  <li><b><font size="+1">Data Impressions:</font></b> your “layers” of data in the visualization. Apply variables and visual elements to each data impression, and
+                watch as they are composed in real time in your visualization.</li>
+                  <li><b><font size="+1">Data Palette:</font></b> the panel on the left-hand side which displays data impressions and loaded variables for your data.</li>
+                  <li><b><font size="+1">Composition Panel:</font></b> the central window into which data impressions are dragged. Each set of data impressions + colormaps, glyphs,
                 streamlines, etc. is called a “plate,” sticking with the printmaking metaphors. Use this panel like you would in Photoshop, adding
-                visual elements as you see fit. More information on this can be found further along in this instructional guide.<br>
-                — <b>Design Palette:</b> the panel on the right-hand side which displays all design options for the elements that comprise your visualization.</p>
-              </p>
+                visual elements as you see fit. More information on this can be found further along in this instructional guide.</li>
+                <li><b><font size="+1">Design Palette:</font></b> the panel on the right-hand side which displays all design options for the elements that comprise your visualization.</li>
+              </ul>
               <div class="first-image">
                   <img src="../images/thrusts/VisSoftwareArch/legend1.png">
               </div>
             </div>
 
-            <div id="ExpandedVocab">
+            <div class="subsection" id="ExpandedVocab">
               <h2>Expanded Visualization Vocabularies</h2>
               <div class="first-image">
                 <img src="../images/thrusts/VisSoftwareArch/glyphs2.png">
@@ -157,7 +160,7 @@
                 </p>
             </div>
 
-            <div id="resources">
+            <div class="subsection" id="resources">
               <h2>Resources</h2>
               <ul>
                 <li><a href="http://sculptingvis/applets/">Artifact Assets</a></li>
@@ -165,6 +168,7 @@
                 <li><a href="http://sculptingvis/applets/">Code</a></li>
               </ul>
             </div>
+            
             <div class=project-publications id=pubs>
               <h2>Publications</h2>
               <pubs>

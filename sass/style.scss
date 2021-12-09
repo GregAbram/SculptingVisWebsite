@@ -21,7 +21,11 @@
 }
 
 body {
-    margin-top: 54px;
+    margin-top: 10px;
+}
+
+p {
+  color: $dark;
 }
 
 a {
@@ -39,7 +43,26 @@ ul {
 }
 
 li {
-    list-style: none;
+    color: $dark;
+}
+
+h1 {
+  color: $dark;
+  font-size: 4em;
+}
+
+h2 {
+  color: $dark;
+}
+
+h3 {
+  color: $dark;
+}
+
+hr {
+  border: 1px solid $dark;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 #hero-image {

@@ -85,6 +85,20 @@ thrust-content {
       width: 100%;
   }
 
+  ul li {
+    padding-top: 10px;
+    margin-left: 20px;
+  }
+
+  ul li a::after {
+    content: "\00A0\00A0\00A0";
+    white-space: pre;
+    background-image: url('../images/icons/url_arrow.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   p a {
       position: relative;
       font-weight: 600;
@@ -124,6 +138,10 @@ thrust-content {
       &.big-paragraph {
           font-size: $big-paragraph;
       }
+  }
+
+  .subsection {
+    margin-top: 50px;
   }
 
   .single-image, .dual-images {

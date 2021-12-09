@@ -105,6 +105,7 @@ section {
   label {
   }
 
+
   pubs {
 
     pub {
@@ -122,12 +123,15 @@ section {
         .title {
           font-weight: bolder;
           font-size: larger;
+          color: $dark;
         }
 
         .authors {
+          color: $dark;
         }
 
         .source {
+          color: $dark;
           font-style: italic;
         }
       }
@@ -135,8 +139,37 @@ section {
   }
 }
 
-.project-publications {
+.cite_popup {
+  background: white;
+  border: 1px solid black;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: max-content;
+  margin-left: 10px;
+  margin-right: 10px;
+  transform: translate(-50%, -50%);
+}
+.cite_popup ul {
+  list-style-type: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
+.cite_popup li {
+  list-style-type: none;
+}
+.cite_popup p {
+  margin: 10px;
+}
+
+.cite_popup button {
+  border: 0px;
+}
+
+.project-publications {
+  margin-top: 50px;
 
   pub {
     display: grid;
@@ -146,8 +179,6 @@ section {
     .pubimg {
       width: 150px;
     }
-
-
 
     .pubtxt {
 
@@ -164,7 +195,6 @@ section {
       }
     }
   }
-
 }
 
 

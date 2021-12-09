@@ -5,6 +5,12 @@
     box-sizing: border-box;
     padding: 0 $page_margin;
 
+    .top-image {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
     #ethos {
         width: 100%;
         box-sizing: border-box;
@@ -45,7 +51,7 @@
             font-family: $primary-font;
             width: 100%;
             text-align: center;
-            font-size: 12px;
+            font-size: 32px;
             text-transform: uppercase;
             letter-spacing: 0.06em;
             padding: 30px 0;
@@ -68,10 +74,10 @@
                 width: 15%;
                 max-width: 200px;
                 min-width: 100px;
+                list-style-type: none;
 
                 img {
                     width: 100%;
-                    border-radius: 2000px;
                 }
 
                 h3 {

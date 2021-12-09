@@ -9,7 +9,8 @@
 
 .titlebar-grid{
     display: grid;
-    grid-template-columns: 4fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
 }
 
 .titlebar-title {
@@ -114,6 +115,7 @@ footer {
 
     .footer-section-title {
       grid-area: title;
+      color: $dark;
       text-align: left;
       border-bottom: solid $dark 1px;
       height: 25px;

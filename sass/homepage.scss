@@ -41,13 +41,12 @@
     }
 
     #about-lab {
-      padding-top: 50px;
       padding-left: 10%;
       padding-right: 10%;
       box-sizing: border-box;
 
       p {
-          Xposition: relative;
+          position: relative;
           font-size: 20px;
           font-family: $primary-font;
           color: $dark;
