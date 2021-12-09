@@ -18,21 +18,7 @@ top = [
 '    <meta name="viewport" content="width=device-width, initial-scale=1">',
 '    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">',
 '    <link rel="stylesheet" href="../css/style.css">',
-'    <!--',
-'    <script>',
-'      var current_cite = "";'
-'      function popup(id) {',
-'        if (current_cite != "") popdown(current_cite);'
-'        e = document.getElementById(id);',
-'        if (e) { e.style.visibility = "visible"; current_cite = id; }',
-'      }',
-'      function popdown(id) {',
-'        e = document.getElementById(id);',
-'        if (e) { e.style.visibility = "hidden"; current_cite = ""; }',
-'      }'
-'      </script>',
-'   -->',
-'   <script src="../js/code.js"></script>',
+'    <script src="../js/code.js"></script>',
 '  </head>',
 '  <body>',
 '    {% include "njk/header.html" %}',
@@ -128,7 +114,7 @@ def main():
     eprint('YEAR %s' % year)
 
     print('            <year>')
-    print('              <label><h2>%s</h2></label>' % year)
+    print('              <div class="pub-year"><label><h2>%s</h2></label></div>' % year)
     print('              <pubs>')
 
     titles = sorted(os.listdir(f'publications/{year}'))
