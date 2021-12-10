@@ -11,9 +11,12 @@
         <script src="../js/code.js"></script>
     </head>
     <body>
+      <navigation-bar>
         {% include "njk/header.html" %}
+      </navigation-bar>
 
-        <div id="homepage-container">
+      <homepage-page>
+        <homepage-content>
           <div id="hero-thrust">
               <a href="ABR.html#overview">
                   <img src="../images/hero.jpg">
@@ -60,8 +63,11 @@
               </div>
             </a>
           </div>
-        </div>
-          {% include "njk/footer.html" %}
-        <script src="" async defer></script>
+        </homepage-content>
+        {% include "njk/footer.html" %}
+      </homepage-page>
+
+
+      <script src="" async defer></script>
     </body>
 </html>

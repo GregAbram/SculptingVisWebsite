@@ -1,6 +1,15 @@
 @import 'variables';
 
+navigation-bar
+{
+  top: 0;
+  width: 100%;
+  height: $navbar-ht;
+  position: absolute;
+}
+
 .titlebar {
+    padding-top: 10px;
     padding-left: 3.5%;
     padding-right: 3.5%;
     background-color: $light;
@@ -23,190 +32,4 @@
     align-items: flex-end;
     justify-content: left;
     font-size: 15px;
-}
-
-footer {
-    display: grid;
-    column-gap: $page_margin;
-    padding: 0 $page_margin 0.75% $page_margin;
-
-    h1 {
-        font-family: $primary-font;
-        text-transform: uppercase;
-        font-size: 14px;
-        line-height: 13px;
-        letter-spacing: 0.06em;
-    }
-
-    h2 {
-        font-family: $primary-font;
-        text-transform: uppercase;
-        font-size: 10px;
-        line-height: 10px;
-        letter-spacing: 0.06em;
-    }
-
-    ul {
-        h2 {
-            font-weight: 600;
-            font-size: 10px;
-            line-height: 15px;
-        }
-        li {
-            font-size: 10px;
-            line-height: 150%;
-        }
-    }
-
-    p {
-        grid-area: copy;
-        text-align: center;
-    }
-
-    .footer-projects {
-      grid-area: projects;
-      display: grid;
-      grid-template-areas: "title" "list";
-      grid-template-rows: auto 1fr;
-    }
-
-    .footer-support {
-      grid-area: support;
-      display: grid;
-      grid-template-areas: "title" "list";
-      grid-template-rows: auto 1fr;
-    }
-
-    .footer-collabs {
-      grid-area: collabs;
-      display: grid;
-      grid-template-areas: "title" "list";
-      grid-template-rows: auto 1fr;
-    }
-
-    .footer-logos {
-
-      img {
-        width: 100px;
-      }
-
-      p {
-        text-align: left;
-        font-size: smaller;
-        margin-top: 0px;
-        margin-bottom: 5px;
-      }
-
-      ul {
-        margin-left: 10px;
-        margin-top: 2px;
-      }
-    }
-
-    .footer-thrusts {
-      display: grid;
-      grid-area: thrusts;
-      grid-template-areas: "title title title title title" "ABR ARVR Imm Eval Support";
-    }
-
-    .footer-thrust {
-      grid-area: thrust;
-    }
-
-    .footer-section-title {
-      grid-area: title;
-      color: $dark;
-      text-align: left;
-      border-bottom: solid $dark 1px;
-      height: 25px;
-    }
-
-    .footer-section {
-        Xborder-top: solid $dark 1px;
-        column-gap: 15px;
-
-        h1 {
-            grid-area: title;
-        }
-
-        .footer-list {
-            h2 {
-                font-size: 13px;
-                margin-bottom: 6px;
-            }
-
-            ul {
-                margin-top: 0;
-                margin-left: 15px;
-
-                li {
-                    a {
-                        font-size: 13px;
-                    }
-                }
-            }
-        }
-    }
-
-    .thrusts {
-        grid-area: thrusts;
-        grid-template-areas: "thrust thrust thrust";
-    }
-
-    .apps {
-        grid-area: apps;
-        grid-template-areas: "title title" ". .";
-    }
-
-    .projects {
-        grid-area: projects;
-        grid-template-areas: "title" ".";
-    }
-}
-
-@include desktop {
-    footer {
-        grid-template-areas:  "thrusts collabs projects support";
-        grid-template-columns: auto auto auto auto;
-        row-gap: 20px;
-    }
-}
-
-@include laptop {
-    footer {
-        grid-template-areas:  "thrusts collabs projects support";
-        grid-template-columns: auto auto auto auto;
-        row-gap: 20px;
-    }
-}
-
-@include tablet {
-    footer {
-      display: grid;
-      grid-template-areas:  "thrusts collabs projects support";
-      grid-template-columns: 5fr 3fr 1fr;
-      grid-template-columns: 2fr 1fr;
-      row-gap: 20px;
-    }
-}
-
-@include mobile {
-    footer {
-        grid-template-areas: "thrusts"
-        "apps"
-        "projects";
-        grid-template-columns: 1fr;
-        padding: $page_margin;
-        row-gap: 20px;
-
-        .thrusts {
-            grid-template-columns: 1fr;
-            grid-template-areas: "title" "." "." "." "." ".";
-        }
-
-        .apps {
-            grid-template-columns: 1fr;
-            grid-template-areas: "title" "." ".";
-        }
-    }
 }

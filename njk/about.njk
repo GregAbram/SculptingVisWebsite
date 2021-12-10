@@ -11,9 +11,11 @@
         <script src="../js/code.js"></script>
     </head>
     <body>
+      <navigation-bar>
         {% include "njk/header.html" %}
+      </navigation-bar>
 
-        <!-- Container to create the sidebar and main page content. -->
+      <svis-page>
         <div id="about-container">
           <div class="first-image">
               <img class="top-image" src="../images/people/people.png">
@@ -130,12 +132,8 @@
                 </ul>
 
             </div>
-
-
-
-
             {% include "njk/footer.html" %}
-
-        <script src="" async defer></script>
+        </svis-page>
+      <script src="" async defer></script>
     </body>
 </html>

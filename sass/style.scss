@@ -1,5 +1,6 @@
 @use 'publications';
 @use 'navigation';
+@use 'footer';
 @use 'thrusts';
 @use 'about';
 @use 'list';
@@ -69,4 +70,15 @@ hr {
   width: 100%;
   max-height: 200px;
   object-fit: cover;
+}
+
+svis-page {
+  top: $navbar-ht;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  padding-left: 2%;
+  padding-right: 2%;
+  overflow: auto;
 }

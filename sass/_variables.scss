@@ -1,12 +1,15 @@
 // COLORS
 $dark: #303030;
-$light: #DFD5C8;
+$light: #A1998F;
 
 //FONTS
 @font-face {
     font-family: 'Sohne';
     src: url(../images/soehne-web-buch-e879cf4711c53e5e300ac0612db99980.woff2);
 }
+
+// navigation bar max-height
+$navbar-ht: 45px;
 
 $primary-font: "Sohne";
 
