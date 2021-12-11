@@ -24,6 +24,7 @@ footer {
 
     ul {
         list-style-type: none;
+        margin-top: 0;
 
         h2 {
             font-weight: 600;
@@ -51,9 +52,27 @@ footer {
     .footer-support {
       grid-area: support;
       display: grid;
+      grid-column-gap: 10px;
       width: 190px;
-      grid-template-areas: "title" "list";
+      grid-template-areas: "logo text";
       grid-template-rows: auto 1fr;
+    }
+
+    .footer-support-logo {
+      grid-area: logo;
+
+      img {
+        width: 75px;
+        border: none;
+      }
+    }
+
+    .footer-support-text {
+      grid-area: text;
+      font-size: smaller;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      width: 250px;
     }
 
     .footer-collabs {
@@ -64,12 +83,15 @@ footer {
     }
 
     .footer-logos {
+      grid-area: logo;
 
       img {
-        width: 100px;
+        width: 75px;
+        border: none;
       }
 
       p {
+        grid-area: text;
         font-size: smaller;
         margin-top: 0px;
         margin-bottom: 5px;
@@ -96,6 +118,11 @@ footer {
     .thrust-title {
       color: $dark;
       font-size: larger;
+      margin-bottom: 5px;
+
+      h2 {
+        margin-block: 2px;
+      }
     }
 
     .footer-content {
@@ -142,7 +169,7 @@ footer {
         grid-template-areas:  "title1 title2 title3 title4"
                               "content1 content2 content3 content4";
         grid-template-columns: 4fr 1fr 1fr 1fr;
-        row-gap: 20px;
+        row-gap: 5px;
         text-align: center;
     }
 }
@@ -152,7 +179,7 @@ footer {
       grid-template-areas:  "title1 title2 title3 title4"
                             "content1 content2 content3 content4";
       grid-template-columns: auto auto auto auto;
-      row-gap: 20px;
+      row-gap: 5px;
       text-align: center;
     }
 }
@@ -163,7 +190,7 @@ footer {
       grid-template-areas:  "title1 title2 title3 title4"
                             "content1 content2 content3 content4";
       grid-template-columns: auto auto auto auto;
-      row-gap: 20px;
+      row-gap: 5px;
       text-align: center;
     }
 }
@@ -175,7 +202,7 @@ footer {
         "projects";
         grid-template-columns: 1fr;
         padding: $page_margin;
-        row-gap: 20px;
+        row-gap: 5px;
         text-align: center;
 
         .thrusts {

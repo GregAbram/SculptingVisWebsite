@@ -72,6 +72,10 @@ hr {
   object-fit: cover;
 }
 
+img {
+  border: 1px solid black;
+}
+
 svis-page {
   top: $navbar-ht;
   bottom: 0;
