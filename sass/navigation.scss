@@ -18,7 +18,7 @@ navigation-bar
 
 .titlebar-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-items: center;
 }
 
@@ -33,3 +33,34 @@ navigation-bar
     justify-content: left;
     font-size: 15px;
 }
+
+.dropbtn {
+  border: none;
+}
+
+.dropdown {
+  background-color: $light;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  background-color: $light;
+  border: 1px solid $dark;
+}
+
+.dropdown-content a {
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  border: 1px solid $dark;
+}
+
+.projects-dropdown:hover .projects-dropdown-content {display: block;}
+.applications-dropdown:hover .applications-dropdown-content {display: block;}
+.relatedwork-dropdown:hover .relatedwork-dropdown-content {display: block;}
+.collaborations-dropdown:hover .collaborations-dropdown-content {display: block;}
