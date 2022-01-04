@@ -1,4 +1,4 @@
-if test ! -e css; then
+if test ! -e html/css; then
   mkdir html/css
 fi
 
