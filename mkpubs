@@ -51,11 +51,14 @@ def add_pub(year, title, indx):
         citelines.append(line)
 
     txt = txt + '<div class="cite_popup" id="%s">' % tag
-    txt = txt + '<ul style="">'
-    for line in citelines:
-      txt = txt + '<li>&nbsp;&nbsp;' + line + '</li>'
-    txt = txt + '</ul>'
     txt = txt + '<button onclick=popdown_bibtex("%s")>X</button>' % tag
+    txt = txt + '<div class="cite_popup_body">'
+    txt = txt + '<h3>BibTeX Citation</h3>'
+    txt = txt + '<textarea rows="10" cols="30" readonly="true">'
+    for line in citelines:
+      txt = txt + line
+    txt = txt + '</textarea>'
+    txt = txt + '</div>'
     txt = txt + '</div>'
 
     citation = loads("".join(citelines)).entries[0]
@@ -83,20 +86,23 @@ def add_pub(year, title, indx):
       txt = txt + '.\n'
 
     if 'journal' in citation:
-      txt = txt + '%s\n' % citation['journal']
+      txt = txt + ' %s\n' % citation['journal']
+    
+    if 'booktitle' in citation:
+      txt = txt + ' %s\n' % citation['booktitle']
 
-    if 'volume' in citation:
+    if 'volume' in citation and len(citation['volume']) != 0:
       txt = txt + 'vol. %s\n' % (citation['volume'])
 
-    if 'number' in citation:
+    if 'number' in citation and len(citation['number']) != 0:
       txt = txt + 'no. %s\n' % (citation['number'])
 
     if 'pages' in citation:
-      txt = txt + '(%s)\n' % (citation['pages'])
+      txt = txt + ' (%s)\n' % (citation['pages'])
 
     txt = txt + '</span>\n'
 
-    txt = txt + '<p onclick=popup_bibtex("%s")>(cite)</p>' % tag
+    txt = txt + '<p onclick=popup_bibtex("%s") style="cursor: pointer;">(cite)</p>' % tag
 
   else:
     txt = txt + '<span class=pub-title>%s</span>. No citation.\n' % title

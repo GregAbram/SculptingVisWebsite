@@ -86,3 +86,9 @@ svis-page {
   padding-right: 2%;
   overflow: auto;
 }
+
+iframe {
+  aspect-ratio: 16 / 9;
+	width: 640px;
+	// height: auto;
+}

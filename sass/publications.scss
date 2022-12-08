@@ -147,27 +147,35 @@ section {
   top: 50%;
   left: 50%;
   max-width: 600px;
+  max-height: 400px;
   margin-left: 10px;
   margin-right: 10px;
   transform: translate(-50%, -50%);
+  
+  button {
+    position: absolute; 
+    top:0; 
+    right:0;
+    border: 0px;
+    font-size: 20px;
+    padding: 4px 8px;
+  }
 }
 
-.cite_popup ul {
-  list-style-type: none;
-  margin-left: 20px;
-  margin-right: 20px;
+
+.cite_popup_body {
+  margin: 10px 15px;
+  
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0;
+    margin: 16px 0;
+    line-height: 1.15;
+    text-transform: capitalize;
+  }
 }
 
-.cite_popup li {
-  list-style-type: none;
-}
-.cite_popup p {
-  margin: 10px;
-}
-
-.cite_popup button {
-  border: 0px;
-}
 
 .pub-year {
   position: sticky;
