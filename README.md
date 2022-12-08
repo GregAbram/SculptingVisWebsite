@@ -1,7 +1,10 @@
 
 # Sculpting Vis Website
 
-http://sculptingvis.tacc.utexas.edu:8080/html/index.html
+The current website can be viewed at:
+
+https://www.sculpting-vis.org/index.html
+
 
 ## First time set up
 
@@ -45,21 +48,54 @@ Open `html/index.html` in your web browser to see the website locally
 
 ## Updating the website
 
-`setup.sh` (MacOS/Linux) or `setup.bat` (Windows) will apply Sass and nunjucks preprocessing and places the results in the html and css directories.  
-
-When you add/change files in the **sass** and **njk** directories, you will need to run:
+Anytime you add/change files in the **sass**, **njk**, or **html/publications** directories, you will need to run:
 
 - `./setup.sh` if you are using MacOS or Linux
 - Or `./setup.bat` if you are using Windows
 
 This will keep the css and html directories up to date so a clean checkout can be immediately used.
 
+The files `setup.sh` (MacOS/Linux) or `setup.bat` (Windows) will apply Sass and nunjucks preprocessing and places the results in the html and css directories.
+
+
+## Updating Existing Publications
+
+When you want to update your publication:
+
+- Locate the corresponding `html/publications/[year]/[title]` folder.
+- Then edit the `image.png` or `pub.bib` file inside.
+
+After you're done editing, run `./setup.sh` or `./setup.bat`.
+
+
+## Adding New Publications
+
+When you want to add new publications, create a new folder `html/publications/[year]/[title]`. Each folder should include at least these 2 files:
+
+- `image.png`: A square image that represents your publication.
+- `pub.bib`: The BibTeX citation for your publication.
+
+A simple `pub.bib` file may look like this:
+
+```
+@article{Author1_Author2_Author3_Year,
+    title={Our Awesome Publication},
+    journal={IEEE Transactions on Visualization and Computer Graphics (to be published)},
+    author={Author1, Author2, and Author3},
+    year={2022},
+    url={link-to-my-publication}
+}
+```
+
+After you're done adding your files, run `./setup.sh` or `./setup.bat`.
+
+
 ## Updating Navigation
 
 Pointers to each page (and subsections, as appropriate) should be added in two places: the lists.njk directory, which is the site map found under the toolbar's **Thrusts & Apps** button, and html/footer.html, which is the directory that appears at the bottom of each page.   When these files are changes, you need to run **make**.
 
 ## Page Assets
-Here are a list of re-usable assets for each thrust and application page. Unique sections are usually marked with a css `id` instead of a`class`.
+Here are a list of re-usable assets for each thrust and application page. Unique sections are usually marked with a css `id` instead of a `class`.
 
 ### Paragraph Sizing
 There are two sizes at the moment: `Regular` and `Big-Text`. The use of these can help create emphasis for important ideas.
@@ -101,7 +137,7 @@ For two images side-by-side in a paragraph, use this directly in the `#content`c
 
 It is recommended to use `.jpg` image types, as they reduce page load times.
 
-### Contributors
+<!-- ### Contributors
 These are the people who contributed to the thrust or application. Hyperlinks are optional.
 
     <div id="contributors">
@@ -146,4 +182,4 @@ I recommend filling this section out last.
     			<li><a href="#sources-support">Sources and Support</a></li>
     		</ul>
     	</div>
-    </div>
+    </div> -->
