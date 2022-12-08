@@ -3,7 +3,7 @@
 
 The current website can be viewed at:
 
-https://www.sculpting-vis.org/index.html
+https://www.sculpting-vis.org
 
 
 ## First time set up
