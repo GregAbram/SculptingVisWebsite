@@ -1,4 +1,6 @@
-html/
+# Ignore .html files in the html folder (but still include everything else)
+html/**/*.html
+
 css/
 pub.html
 publications.njk
